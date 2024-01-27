@@ -1,0 +1,60 @@
+.hero{
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 1200px;
+  justify-content: center;
+&_imgS{
+  width: 100%;
+  height: 500px;
+}
+  &_prev{
+    position: absolute;
+    top: auto !important;
+    width: 30px!important;
+    height: 30px!important;
+
+  }
+  &_nextt{
+    position: absolute;
+    top: auto !important;
+    width: 30px!important;
+    left: 5% !important;
+    height: 30px!important;
+
+  }
+
+  .swiper-slide{
+    width: 1200px!important;
+  }
+
+}
+.swiper-button-prev:after,
+.swiper-button-next:after{
+  font-size: 14px!important;
+  color: white;
+}
+
+/* Example CSS for navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  //width: 30px;
+  //height: 20px;
+  //position: absolute!important;
+  background-color:#25333B;
+  //color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  bottom: 0!important;
+  cursor: pointer;
+
+}
+.swiper-button-next{
+
+}
+
+/* Additional styling for active slide */
+.swiper-button-prev.active,
+.swiper-button-next.active {
+  background-color: #555;
+}

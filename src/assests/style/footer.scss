@@ -1,0 +1,153 @@
+.footer {
+  display: flex;
+  height: auto;
+  // height: 300px;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  margin-top: 30px;
+  &_link {
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 40px;
+  
+    li {
+      cursor: pointer;
+    }
+  }
+  &_brandIcon{
+    margin-top: 40px;
+  }
+  &_brand {
+    display: none;
+  }
+  &_links{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+
+  }
+}
+@media (max-width: 562px) {
+  .footer {
+    &_brandIcon {
+      display: none;
+    }
+    &_brand {
+      margin-top: 50px;
+      display: flex;
+      color: white;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 900;
+
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    &_link{
+      align-items: center;
+      flex-direction: column;
+    }
+
+  }
+}
+@media (max-width: 832px) {
+  .footer {
+    &_brandIcon {
+      display: none;
+    }
+    &_brand {
+      margin-top: 50px;
+      display: flex;
+      color: white;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 900;
+
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    &_link{
+      align-items: center;
+      flex-direction: column;
+    }
+
+  }
+}
+@media (max-width: 900px) {
+  .footer {
+    &_brandIcon {
+      display: none;
+    }
+    &_brand {
+      margin-top: 50px;
+      display: flex;
+      color: white;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 900;
+
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    &_link{
+      align-items: center;
+      flex-direction: column;
+    }
+
+  }
+}
+@media (max-width: 1024px) {
+  .footer {
+    &_brandIcon {
+      display: none;
+    }
+    &_brand {
+      margin-top: 50px;
+      display: flex;
+      color: white;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 900;
+
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    &_link{
+      align-items: center;
+      flex-direction: column;
+    }
+
+  }
+}
+@media (max-width: 1120px) {
+  .footer {
+    &_brandIcon {
+      display: none;
+    }
+    &_brand {
+      margin-top: 50px;
+      display: flex;
+      color: white;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 900;
+
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    &_link{
+      align-items: center;
+      flex-direction: column;
+    }
+
+  }
+}

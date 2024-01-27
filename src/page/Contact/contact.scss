@@ -1,0 +1,339 @@
+.contact {
+  overflow: hidden;
+
+  &_headers {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  &_headersText {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 56px;
+  }
+
+  &_contactRow {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &_contain {
+      display: flex;
+      padding-bottom: 60px;
+
+      justify-content: space-between;
+
+      &_socialsCard {
+        width: 32%;
+        background: #FFF;
+        height: 32%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 70px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+        &_contactImg {
+          width: 97px;
+          height: 97px;
+          margin: 50px auto;
+        }
+
+        &_numberss {
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        &_numb {
+          width: 88%;
+          margin: 0 auto;
+          text-align: center;
+          margin-top: 20px;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          //padding-bottom: 40px;
+          //margin-bottom: 40px;
+        }
+      }
+    }
+
+    &_contactForm {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 60px;
+
+      &_conInput {
+        width: 48%;
+        position: relative;
+        padding-bottom: 50px;
+
+        &_labels {
+          display: flex;
+          flex-direction: column;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          //margin-bottom: 40px;
+          line-height: normal;
+
+          &_int {
+            padding: 15px;
+            outline: none;
+            margin-top: 10px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            border: 1px solid #B6B6B6;
+            background: var(--Gray-gray-1, #FFF);
+            margin-bottom: 20px;
+          }
+
+        }
+
+        &_btnSend {
+          display: flex;
+          justify-content: right;
+          padding: 10px 20px;
+          text-align: right;
+          align-items: end;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          border: none;
+          background: #BAAC96;
+          color: white;
+          cursor: pointer;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: normal;
+          text-transform: uppercase;
+        }
+        &_map{
+
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 562px) {
+  .contact {
+    &_headImg {
+      width: 100%;
+      height: 300px;
+    }
+    &_contactRow{
+      &_contain{
+        flex-direction: column;
+        &_socialsCard{
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 40px;
+        }
+      }
+      &_contactForm{
+        flex-direction: column;
+        &_conInput{
+          width: 90%;
+          margin: 0 auto;
+          &_btnSend{
+            position: relative;
+            margin-top: 40px;
+            padding: 15px 25px;
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+          }
+          &_map{
+            height: 300px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 832px) {
+ .contact {
+    &_headImg {
+      width: 100%;
+      height: 300px;
+    }
+    &_contactRow{
+      &_contain{
+        flex-direction: column;
+        &_socialsCard{
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 40px;
+        }
+      }
+      &_contactForm{
+        flex-direction: column;
+        &_conInput{
+          width: 90%;
+          margin: 0 auto;
+          &_btnSend{
+            position: relative;
+            margin-top: 40px;
+            padding: 15px 25px;
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+          }
+          &_map{
+            height: 300px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 900px) {
+ .contact {
+    &_headImg {
+      width: 100%;
+      height: 300px;
+    }
+    &_contactRow{
+      &_contain{
+        flex-direction: column;
+        &_socialsCard{
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 40px;
+        }
+      }
+      &_contactForm{
+        flex-direction: column;
+        &_conInput{
+          width: 90%;
+          margin: 0 auto;
+          &_btnSend{
+            position: relative;
+            margin-top: 40px;
+            padding: 15px 25px;
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+          }
+          &_map{
+            height: 300px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 1024px) {
+ .contact {
+    &_headImg {
+      width: 100%;
+      height: 300px;
+    }
+    &_contactRow{
+      &_contain{
+        flex-direction: column;
+        &_socialsCard{
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 40px;
+        }
+      }
+      &_contactForm{
+        flex-direction: column;
+        &_conInput{
+          width: 90%;
+          margin: 0 auto;
+          &_btnSend{
+            position: relative;
+            margin-top: 40px;
+            padding: 15px 25px;
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+          }
+          &_map{
+            height: 300px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 1120px) {
+ .contact {
+    &_headImg {
+      width: 100%;
+      height: 300px;
+    }
+    &_contactRow{
+      &_contain{
+        flex-direction: column;
+        &_socialsCard{
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 40px;
+        }
+      }
+      &_contactForm{
+        flex-direction: column;
+        &_conInput{
+          width: 90%;
+          margin: 0 auto;
+          &_btnSend{
+            position: relative;
+            margin-top: 40px;
+            padding: 15px 25px;
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            text-transform: uppercase;
+          }
+          &_map{
+            height: 300px;
+          }
+        }
+      }
+    }
+
+  }
+}

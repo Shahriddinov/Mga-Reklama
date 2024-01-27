@@ -1,0 +1,13 @@
+.slider{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  &_sliderImg{
+    width: 280px;
+    height: 208px;
+    padding: 10px;
+  }
+}
+.swiper-slide{
+  width: 280px!important;
+}

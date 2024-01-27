@@ -1,0 +1,134 @@
+.message {
+  width: 100%;
+  height: 350px;
+  background: black;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  &_mains {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    margin-top: 40px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &_little {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    margin: 10px;
+  }
+  &_form {
+    width: 100%;
+    height: 90px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_inputs {
+      width: 80%;
+      height: 80px;
+      padding: 10px;
+      background: #ececec;
+      outline: none;
+      color: #000;
+      font-size: 18px;
+
+      font-weight: 600;
+      &::placeholder {
+        color: #b1b1b1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+    &_sends {
+      height: 78px;
+      background: #baac96;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 900;
+      cursor: pointer;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+}
+@media (max-width: 562px) {
+  .message {
+    &_form {
+      &_inputs {
+        width: 60%;
+        height: 50px;
+      }
+      &_sends {
+        height: 49px;
+      }
+    }
+  }
+}
+@media (max-width: 832px) {
+  .message {
+    &_form {
+      &_inputs {
+        width: 60%;
+        height: 50px;
+      }
+      &_sends {
+        height: 49px;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .message {
+    &_form {
+      &_inputs {
+        width: 60%;
+        height: 50px;
+      }
+      &_sends {
+        height: 49px;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .message {
+    &_form {
+      &_inputs {
+        width: 60%;
+        height: 50px;
+      }
+      &_sends {
+        height: 49px;
+      }
+    }
+  }
+}
+@media (max-width: 1120px) {
+  .message {
+    &_form {
+      &_inputs {
+        width: 60%;
+        height: 50px;
+      }
+      &_sends {
+        height: 49px;
+      }
+    }
+  }
+}

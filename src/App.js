@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {lazy, Suspense} from "react";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Spinner from "./component/Spinner/Spinner";
+import ScrollTop from "./hoc/ScrollTop";
+import Layout from "./component/Layout/Layout";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+const Home = lazy(() => import("./page/Home/home"));
+const AboutCompany = lazy(() => import("./page/AboutCompany/AboutCompany"));
+const Services = lazy(() => import("./page/Services/services"));
+const Contact = lazy(()=> import("./page/Contact/contact"))
+
+
+const routes = [
+    {path: "/", element: Home},
+    {path: "/company", element: AboutCompany},
+    {path: "/services", element: Services},
+    {path: "/contact", element: Contact}
+];
+
+const RoutesContainer = () => (
+    <Router>
+        <Layout>
+            <Suspense fallback={<Spinner position="full"/>}>
+                <Routes>
+                    {routes.map((route, key) => {
+                        const RouteComponent = ScrollTop(route.element);
+                        return (
+                            <Route key={key} path={route.path} element={<RouteComponent/>}/>
+                        );
+                    })}
+                    {/* <Route path="*" element={<NotFound />} /> */}
+                </Routes>
+            </Suspense>
+        </Layout>
+    </Router>
+);
+
+export default RoutesContainer;

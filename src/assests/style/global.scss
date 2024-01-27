@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+   font-family: "avertabold", sans-serif;
+  list-style: none;
+}
+
+body {
+   font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  color: #25333B;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+.row {
+  width: 1200px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+

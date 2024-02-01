@@ -1,6 +1,27 @@
 .aboutCompany {
   overflow: hidden;
 
+  &_imgMain {
+    margin-top: 6%;
+    width: 100%;
+    height: 400px;
+    position: relative;
+  }
+
+  .blur {
+    width: 25%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background: white;
+    font-size: 20px;
+    font-weight: 600;
+
+  }
+
   &_fl {
     display: flex;
     justify-content: center;
@@ -21,11 +42,12 @@
         // height: 200px;
         &_m,
         &_g,
-        &_a{
+        &_a {
           width: 33%;
           z-index: 9;
         }
-        &_m{
+
+        &_m {
           background-image: url("../../assests/images/m.png");
           background-repeat: no-repeat;
           background-position: center;
@@ -35,7 +57,8 @@
           //margin-top: 20px;
           transform: translate3d(0px, -227px, 0px)
         }
-        &_g{
+
+        &_g {
           background-image: url("../../assests/images/g.png");
           background-repeat: no-repeat;
           background-position: center;
@@ -45,7 +68,8 @@
           margin-top: 120px;
           transform: translate3d(0px, -353px, 0px);
         }
-        &_a{
+
+        &_a {
           background-image: url("../../assests/images/a.png");
           background-repeat: no-repeat;
           background-position: center;
@@ -55,6 +79,7 @@
           //margin-top: 20px;
           transform: translate3d(0px, 234px, 0px);
         }
+
         &_full {
           &_com {
             font-size: 30px;
@@ -71,14 +96,16 @@
             line-height: normal;
             margin-top: 10px;
             margin-bottom: 15px;
+            text-transform: uppercase;
+
           }
 
           &_information {
+            margin-right: 23px;
             font-size: 14px;
-            font-family: Roboto, sans-serif;
             font-style: normal;
             font-weight: 400;
-            line-height: 22px;
+            line-height: 24px;
           }
         }
       }
@@ -90,6 +117,7 @@
     width: 100%;
     height: auto;
     display: flex;
+
     margin-bottom: 100px;
     justify-content: center;
 
@@ -144,11 +172,16 @@
   }
 }
 
-@media (max-width: 562px) {
+@media (max-width: 365px) {
   .aboutCompany {
     &_imgMain {
       width: 100%;
       height: 300px;
+    }
+
+    .blur {
+      width: 40%;
+      height: 80px;
     }
 
     &_fl {
@@ -157,10 +190,18 @@
         margin: 0 auto;
         margin-top: 40px;
         text-align: center;
+        display: flex;
+        justify-content: center;
         flex-direction: column-reverse;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
 
         &_ImgT {
-          width: 100%;
+          width: 100% !important;
+          margin: 0 auto;
 
           &_fed {
             height: auto;
@@ -168,48 +209,269 @@
           }
 
           &_full {
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
             &_information {
+              width: 90%;
+              margin: 0 auto;
               text-align: justify;
-              margin-top: 30px;
-              margin-bottom: 30px;
+
+            }
+            &_com {
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 900;
+              line-height: normal;
+              text-transform: uppercase;
             }
           }
-        }
-      }
-    }
 
-    &_GalleryImg {
-      &_photoTitle {
-        text-align: center;
-      }
+          &_m,
+          &_g,
+          &_a {
+            width: 20%;
+            z-index: 9;
+          }
 
-      &_photos {
-        flex-direction: column;
+          &_m {
+            background-image: url("../../assests/images/m.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 75%;
 
-        &_oneImg {
-          margin: 0 auto;
-          width: 90%;
+            //margin-top: 20px;
+            transform: translate3d(0px, -227px, 0px)
+          }
 
-          margin-bottom: 20px;
+          &_g {
+            background-image: url("../../assests/images/g.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 65%;
 
-          &_build {
-            height: auto;
+            margin-top: 120px;
+            transform: translate3d(0px, -353px, 0px);
+          }
+
+          &_a {
+            background-image: url("../../assests/images/a.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 65%;
+
+            //margin-top: 20px;
+            transform: translate3d(0px, 234px, 0px);
           }
         }
-
-        &_twoImg,
-        &_thereImg {
-          width: 90%;
-          margin: 0 auto;
-          margin-bottom: 20px;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: cover;
-
-        }
-
       }
     }
+
+
+  }
+}
+
+@media (max-width: 425px) {
+  .aboutCompany {
+    &_imgMain {
+      width: 100%;
+      height: 300px;
+    }
+
+    .blur {
+      width: 40%;
+      height: 80px;
+    }
+
+    &_fl {
+      &_comp {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+
+        &_ImgT {
+          width: 100% !important;
+          margin: 0 auto;
+
+          &_fed {
+            height: auto;
+            margin-bottom: 40px;
+          }
+
+          &_full {
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            &_information {
+              width: 90%;
+              margin: 0 auto;
+              text-align: justify;
+
+            }
+            &_com {
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 900;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+          }
+
+          &_m,
+          &_g,
+          &_a {
+            width: 30%;
+            z-index: 9;
+          }
+
+          &_m {
+            background-image: url("../../assests/images/m.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 75%;
+
+            //margin-top: 20px;
+            transform: translate3d(0px, -227px, 0px)
+          }
+
+          &_g {
+            background-image: url("../../assests/images/g.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 65%;
+
+            margin-top: 120px;
+            transform: translate3d(0px, -353px, 0px);
+          }
+
+          &_a {
+            background-image: url("../../assests/images/a.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 65%;
+
+            //margin-top: 20px;
+            transform: translate3d(0px, 234px, 0px);
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 562px) {
+  .aboutCompany {
+    &_imgMain {
+      width: 100%;
+      height: 300px;
+    }
+
+    .blur {
+      width: 40%;
+      height: 80px;
+    }
+
+    &_fl {
+      &_comp {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+
+        &_ImgT {
+          width: 100% !important;
+          margin: 0 auto;
+
+          &_fed {
+            height: auto;
+            margin-bottom: 40px;
+          }
+
+          &_full {
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            &_information {
+              width: 90%;
+              margin: 0 auto;
+              text-align: justify;
+
+            }
+            &_com {
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 900;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+          }
+
+          &_m,
+          &_g,
+          &_a {
+            width: 30%;
+            z-index: 9;
+          }
+
+          &_m {
+            background-image: url("../../assests/images/m.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 75%;
+
+            //margin-top: 20px;
+            transform: translate3d(0px, -227px, 0px)
+          }
+
+          &_g {
+            background-image: url("../../assests/images/g.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 65%;
+
+            margin-top: 120px;
+            transform: translate3d(0px, -353px, 0px);
+          }
+
+          &_a {
+            background-image: url("../../assests/images/a.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 65%;
+
+            //margin-top: 20px;
+            transform: translate3d(0px, 234px, 0px);
+          }
+        }
+      }
+    }
+
+
   }
 }
 
@@ -220,6 +482,11 @@
       height: 300px;
     }
 
+    .blur {
+      width: 40%;
+      height: 80px;
+    }
+
     &_fl {
       &_comp {
         width: 90%;
@@ -238,9 +505,10 @@
 
           &_full {
             &_information {
+              width: 90%;
+              margin: 0 auto;
               text-align: justify;
-              margin-top: 30px;
-              margin-bottom: 30px;
+
             }
           }
         }
@@ -289,6 +557,11 @@
       height: 300px;
     }
 
+    .blur {
+      width: 40%;
+      height: 80px;
+    }
+
     &_fl {
       &_comp {
         width: 90%;
@@ -307,9 +580,10 @@
 
           &_full {
             &_information {
+              width: 90%;
+              margin: 0 auto;
               text-align: justify;
-              margin-top: 30px;
-              margin-bottom: 30px;
+
             }
           }
         }
@@ -358,6 +632,11 @@
       height: 300px;
     }
 
+    .blur {
+      width: 40%;
+      height: 80px;
+    }
+
     &_fl {
       &_comp {
         width: 90%;
@@ -376,9 +655,10 @@
 
           &_full {
             &_information {
+              width: 90%;
+              margin: 0 auto;
               text-align: justify;
-              margin-top: 30px;
-              margin-bottom: 30px;
+
             }
           }
         }
@@ -427,6 +707,11 @@
       height: 300px;
     }
 
+    .blur {
+      width: 40%;
+      height: 80px;
+    }
+
     &_fl {
       &_comp {
         width: 90%;
@@ -445,9 +730,84 @@
 
           &_full {
             &_information {
+              width: 90%;
+              margin: 0 auto;
               text-align: justify;
-              margin-top: 30px;
-              margin-bottom: 30px;
+
+            }
+          }
+        }
+      }
+    }
+
+    &_GalleryImg {
+      &_photoTitle {
+        text-align: center;
+      }
+
+      &_photos {
+        flex-direction: column;
+
+        &_oneImg {
+          margin: 0 auto;
+          width: 90%;
+
+          margin-bottom: 20px;
+
+          &_build {
+            height: auto;
+          }
+        }
+
+        &_twoImg,
+        &_thereImg {
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+
+        }
+
+      }
+    }
+  }
+}
+@media (max-width: 1175px) {
+  .aboutCompany {
+    &_imgMain {
+      width: 100%;
+      height: 300px;
+    }
+
+    .blur {
+      width: 40%;
+      height: 80px;
+    }
+
+    &_fl {
+      &_comp {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center;
+        flex-direction: column-reverse;
+
+        &_ImgT {
+          width: 100%;
+
+          &_fed {
+            height: auto;
+            margin-bottom: 40px;
+          }
+
+          &_full {
+            &_information {
+              width: 90%;
+              margin: 0 auto;
+              text-align: justify;
+
             }
           }
         }

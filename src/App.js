@@ -7,15 +7,15 @@ import Layout from "./component/Layout/Layout";
 
 const Home = lazy(() => import("./page/Home/home"));
 const AboutCompany = lazy(() => import("./page/AboutCompany/AboutCompany"));
-const Services = lazy(() => import("./page/Services/services"));
+const gallery = lazy(() => import("./page/Gallery/gallery"));
 const Contact = lazy(()=> import("./page/Contact/contact"))
-
-
+const ArtBoard = lazy(()=> import("./page/ArtBoard/artBoard"))
 const routes = [
     {path: "/", element: Home},
     {path: "/company", element: AboutCompany},
-    {path: "/services", element: Services},
-    {path: "/contact", element: Contact}
+    {path: "/gallery", element: gallery},
+    {path: "/contact", element: Contact},
+    {path: "/board", element: ArtBoard}
 ];
 
 const RoutesContainer = () => (

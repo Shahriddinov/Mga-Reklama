@@ -13,10 +13,13 @@ import {sendInfoContact} from "../../reduxToolkit/SendQuetion/sendQuetion";
 import {t} from "i18next";
 import {resetContact} from "../../reduxToolkit/SendQuetion";
 import {ToastContainer, toast} from "react-toastify";
+import Typical from "react-typical";
 
 function Contact(props) {
     const dispatch = useDispatch();
     const formRef = useRef();
+    const lan = useSelector((state) => state.language.language);
+
     const loading = useSelector((state) => state.contactSlider.loading);
     const conctactData = useSelector((state) => state.contactSlider.contactData);
     const sendInfoData = useSelector((state) => state.sendQuetion.sendInfoData);
@@ -47,16 +50,15 @@ function Contact(props) {
         }
 
         dispatch(resetContact());
-    }, [sendInfoData]);
+    }, [sendInfoData, lan]);
 
     useEffect(() => {
         dispatch(getContact());
-    }, [dispatch]);
+    }, [dispatch, lan]);
 
     if (loading) {
         return <Spinner />;
     }
-    console.log(conctactData)
     return (
         <div className="contact">
             <ToastContainer
@@ -72,58 +74,79 @@ function Contact(props) {
                 theme="light"
             />
             <img className="contact_headImg" src={images18} alt=""/>
-            <div className="contact_headers">контакты</div>
-            <div className="contact_headersText">Ключевые слова контакты</div>
+            <div className="contact_headers">
+                {t("contact")}
+            </div>
+            <div className="contact_headersText"></div>
             <div className="contact_contactRow">
                 <div className="row">
-                    <div className="contact_contactRow_contain">
-                        {conctactData.map((item, index)=>(
-                            <div key={index} className="contact_contactRow_contain_socialsCard">
-                                <img className="contact_contactRow_contain_socialsCard_contactImg" src={`${baseUrlImg}/${item.icon}`} alt=""/>
-                                <div className="contact_contactRow_contain_socialsCard_numberss">{item.name}</div>
-                                <div className="contact_contactRow_contain_socialsCard_numb">{item.text[0]}</div>
-                                <div className="contact_contactRow_contain_socialsCard_numb">{item.text[1]}</div>
+                    {/*<a href={`tel:${contactData.phone}`}>{contactData.phone}</a>*/}
+                    {/*<a href={`mailto:${contactData.email}`}>*/}
+                    {/*    {contactData.email}*/}
+                    {/*</a>*/}
+                        <div className="contact_contactRow_contain">
+                            <div  className="contact_contactRow_contain_socialsCard">
+                                <img className="contact_contactRow_contain_socialsCard_contactImg" src={call} alt=""/>
+                                <div className="contact_contactRow_contain_socialsCard_numberss">Number</div>
+                                <div className="contact_contactRow_contain_socialsCard_numb" >
+                                    <a style={{color:"#25333b"}} href="tel:+998770124004">+998770124004</a>
+                                </div>
                             </div>
-                        ))}
-                    </div>
+                            <div  className="contact_contactRow_contain_socialsCard">
+                                <img className="contact_contactRow_contain_socialsCard_contactImg" src={email} alt=""/>
+                                <div className="contact_contactRow_contain_socialsCard_numberss">Email</div>
+                                <div className="contact_contactRow_contain_socialsCard_numb" >
+                                    <a target="_blank" style={{color:"#25333b"}} href="mailto:info@mgareklama.com">info@mgareklama.com</a>
+                                </div>
+                            </div>
+                            <div  className="contact_contactRow_contain_socialsCard">
+                                <img className="contact_contactRow_contain_socialsCard_contactImg" src={home} alt=""/>
+                                <div className="contact_contactRow_contain_socialsCard_numberss">Адресс</div>
+                                <div className="contact_contactRow_contain_socialsCard_numb" >
+                                    <a target="_blank" style={{color:"#25333b"}} href="tel:+998770124004">Яшнабадский Район Улица Элбека дом 61 Текнопарк Д 30
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     <div className="contact_contactRow_contactForm">
                         <div className="contact_contactRow_contactForm_conInput">
                             <form ref={formRef}
                                   onSubmit={handleSumbit}>
-                                <label className="contact_contactRow_contactForm_conInput_labels">Введите имя
+                                <label className="contact_contactRow_contactForm_conInput_labels">{t("writeName")}
                                     <input onChange={(e) =>
                                         setDataContact((prev) => ({
                                             ...prev,
                                             name: e.target.value,
                                         }))} className="contact_contactRow_contactForm_conInput_labels_int" type="name"
-                                           name="name" placeholder="Name"/>
+                                           name="name" placeholder={t("name")}/>
                                 </label>
-                                <label className="contact_contactRow_contactForm_conInput_labels">Введите фамилию
+                                <label className="contact_contactRow_contactForm_conInput_labels">{t("writeLastName")}
                                     <input onChange={(e) =>
                                         setDataContact((prev) => ({
                                             ...prev,
                                             family: e.target.value,
                                         }))} className="contact_contactRow_contactForm_conInput_labels_int"
-                                           type="lastName" name="lastName" placeholder="Last Name"/>
+                                           type="lastName" name="lastName" placeholder={t("lastName")}/>
                                 </label>
-                                <label className="contact_contactRow_contactForm_conInput_labels">Введите номер телефона
+                                <label className="contact_contactRow_contactForm_conInput_labels">{t("number")}
                                     <input onChange={(e) =>
                                         setDataContact((prev) => ({
                                             ...prev,
                                             phone: e.target.value,
                                         }))} className="contact_contactRow_contactForm_conInput_labels_int" type="number"
-                                           name="number" placeholder="+998 90 721 88 36"/>
+                                           name="number" placeholder="+998 90 123 45 67"/>
                                 </label>
-                                <label className="contact_contactRow_contactForm_conInput_labels">Описание
+                                <label className="contact_contactRow_contactForm_conInput_labels">{t("description")}
                                     <textarea onChange={(e) =>
                                         setDataContact((prev) => ({
                                             ...prev,
                                             description: e.target.value,
                                         }))} className="contact_contactRow_contactForm_conInput_labels_int"
-                                              placeholder="Describtion" name="decrebtion" id=""></textarea>
+                                              placeholder={t("description")} name="decrebtion" id=""></textarea>
                                     {/*<input className="contact_contactRow_contactForm_conInput_labels_int" type="number" name="number" placeholder="+998 90 721 88 36"/>*/}
                                 </label>
-                                <button className="contact_contactRow_contactForm_conInput_btnSend">Отправить</button>
+                                <button className="contact_contactRow_contactForm_conInput_btnSend">{t("send")}</button>
                             </form>
                         </div>
                         <div className="contact_contactRow_contactForm_conInput">

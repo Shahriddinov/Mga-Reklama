@@ -17,6 +17,7 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import Rellax from "rellax";
 import Typical from "react-typical";
+
 export default function AboutHome() {
     const dispatch = useDispatch();
     const lan = useSelector((state) => state.language.language);
@@ -50,7 +51,7 @@ export default function AboutHome() {
     }, []);
     useEffect(() => {
         dispatch(getAbout());
-    }, [dispatch]);
+    }, [dispatch, lan]);
 
     if (loading) {
         return <Spinner/>;
@@ -58,7 +59,7 @@ export default function AboutHome() {
 
     return (
         <div className="aboutCompany">
-            {aboutData.map((item, index) => (
+            {aboutData?.map((item, index) => (
                 <>
                     <div key={index} className="aboutCompany_fl">
                         <div className="row">
@@ -85,24 +86,21 @@ export default function AboutHome() {
                                         <div data-aos="flip-left"
                                              data-aos-easing="ease-out-cubic"
                                              data-aos-duration="1500" className="aboutCompany_fl_comp_ImgT_full_com">
-                                            <Typical
-                                                steps={[`${item.title}`, 1000, 'About our company', 500]}
-                                                loop={Infinity}
-                                                wrapper="p"
-                                            />
+                                            {item.title}
 
                                         </div>
                                         <div data-aos="fade-up"
-                                               data-aos-anchor-placement="center-bottom"
-                                            className="aboutCompany_fl_comp_ImgT_full_direct ">
+                                             data-aos-anchor-placement="center-bottom"
+                                             className="aboutCompany_fl_comp_ImgT_full_direct ">
 
-                                            {item.subtitle}
+                                            {item?.subtitle}
                                         </div>
                                         <div data-aos="fade-up"
-                                             data-aos-anchor-placement="center-bottom" dangerouslySetInnerHTML={{
-                                            __html: item.info,
-                                        }} className="aboutCompany_fl_comp_ImgT_full_information">
-
+                                             data-aos-anchor-placement="center-bottom"
+                                             className="aboutCompany_fl_comp_ImgT_full_information">
+<span dangerouslySetInnerHTML={{
+    __html: item.info,
+}}></span>
                                         </div>
                                     </div>
                                 </div>
@@ -110,33 +108,7 @@ export default function AboutHome() {
                         </div>
 
                     </div>
-                    {/*<div className="aboutCompany_GalleryImg">*/}
-                    {/*    <div className="row">*/}
-                    {/*        <div className="aboutCompany_GalleryImg_photoTitle">фото галерея</div>*/}
-                    {/*        <div className="aboutCompany_GalleryImg_photos">*/}
 
-                    {/*            <div className="aboutCompany_GalleryImg_photos_oneImg">*/}
-                    {/*                <img className="aboutCompany_GalleryImg_photos_oneImg_build" src={imageOne} alt=""/>*/}
-                    {/*            </div>*/}
-                    {/*            <div className="aboutCompany_GalleryImg_photos_twoImg">*/}
-                    {/*                <img className="aboutCompany_GalleryImg_photos_twoImg_redCar" src={imageTwo}*/}
-                    {/*                     alt=""/>*/}
-                    {/*                <img className="aboutCompany_GalleryImg_photos_twoImg_redCar" src={imageThere}*/}
-                    {/*                     alt=""/>*/}
-                    {/*            </div>*/}
-
-                    {/*            <div className="aboutCompany_GalleryImg_photos_thereImg">*/}
-                    {/*                <img className="aboutCompany_GalleryImg_photos_thereImg_office" src={imageFour}*/}
-                    {/*                     alt=""/>*/}
-                    {/*                <img className="aboutCompany_GalleryImg_photos_thereImg_office" src={imageFive}*/}
-                    {/*                     alt=""/>*/}
-                    {/*            </div>*/}
-
-
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-
-                    {/*</div>*/}
                 </>
             ))}
 

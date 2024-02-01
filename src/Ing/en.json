@@ -1,3 +1,18 @@
 {
-  "main": "Gallery"
+  "main": "Main",
+  "about": "About",
+  "gallery": "Gallery",
+  "contact": "Contact",
+  "art": "art board",
+  "services": "Services",
+  "name": "Name",
+  "writeName": "Enter your name",
+  "writeLastName": "Enter last name",
+  "number": "Enter your phone number",
+  "lastName": "Last Name",
+  "description": "Description",
+  "have": "Have questions?",
+  "all": "All the latest",
+  "send": "Send",
+  "message": "Send us a message"
 }

@@ -9,6 +9,7 @@ export const sendFullContact = createAsyncThunk(
             .post(SEND_CONTACT, payload, {
                 headers: {
                     "Content-Type": "application/json",
+                    'language': localStorage.getItem('language')
                 },
             })
             .then((res) => res.data);
@@ -21,6 +22,8 @@ export const sendInfoContact = createAsyncThunk(
             .post(POST_ALL_INFO, payload, {
                 headers: {
                     "Content-Type": "application/json",
+                    'language': localStorage.getItem('language')
+
                 },
             })
             .then((res) => res.data);

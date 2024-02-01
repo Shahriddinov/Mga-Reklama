@@ -1,0 +1,360 @@
+.services {
+  overflow: hidden;
+  position: relative;
+
+  &_iServices {
+    width: 50%;
+    height: 300px;
+    background: #25333B;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    margin: 0 auto;
+    line-height: normal;
+    text-transform: uppercase;
+    //top: 2%;
+  }
+
+  &_show {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    &_serTit {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+
+      &_stavka {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 900;
+        margin: 0 auto;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+
+      &_patty {
+        font-size: 12px;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  &_bad {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding: 60px 0;
+
+    &_double {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      background-image: url("../../../assests/images/dotted-pattern.png");
+
+      &_serviceAbout {
+        width: 28%;
+        background-image: linear-gradient(30deg, #25333b, #e8ebec);
+        color: white;
+        display: flex;
+        padding: 30px 45px;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        gap: 30px;
+        transform: scale(1); /* Adjust the scale factor for zoom effect */
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+        &:hover {
+
+          color: #25333B;
+          cursor: pointer;
+
+
+        }
+
+        @keyframes pulse512 {
+          0% {
+            box-shadow: 0 0 0 0 #05bada66;
+          }
+
+          70% {
+            box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+          }
+
+          100% {
+            box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+          }
+        }
+
+        &_seven {
+          width: 72px;
+          height: 73px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          object-fit: cover;
+        }
+
+        &_laser {
+          font-size: 26px;
+          margin-bottom: 20px;
+          margin-top: 15px;
+          color: inherit;
+          font-weight: 900;
+          font-style: normal;
+
+        }
+
+        &_plus {
+          display: flex;
+          justify-content: right;
+          text-align: right;
+          float: right;
+          transition: transform 0.5s;
+
+          &:hover {
+            transform: rotate(360deg);
+
+          }
+
+        }
+
+
+      }
+    }
+
+    &_double1 {
+      display: flex;
+      justify-content: space-between;
+
+      &_serviceAbout {
+        width: 50%;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white !important;
+        transition: transform 0.2s; /* Animation */
+        gap: 40px;
+
+        &_seven {
+          width: 100%;
+          height: 300px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          object-fit: cover;
+        }
+
+        &_laser {
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: normal;
+
+        }
+
+        &_lorem {
+          padding: 0 40px;
+          color: #000;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 562px) {
+  .services {
+    &_bad {
+      &_double {
+        flex-direction: column;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 50px !important;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+
+      &_double1 {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 832px) {
+  .services {
+    &_bad {
+      &_double {
+        flex-direction: column;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 50px !important;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+
+      &_double1 {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .services {
+    &_bad {
+      &_double {
+        flex-direction: column;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 50px !important;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+
+      &_double1 {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .services {
+    &_bad {
+      &_double {
+        flex-direction: column;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 50px !important;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+
+      &_double1 {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1120px) {
+  .services {
+    &_bad {
+      &_double {
+        flex-direction: column;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 50px !important;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+
+      &_double1 {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+
+        &_serviceAbout {
+          width: 90%;
+          margin: 0 auto;
+
+          &_laser {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}

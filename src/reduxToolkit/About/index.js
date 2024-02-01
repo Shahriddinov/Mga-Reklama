@@ -27,5 +27,4 @@ const aboutSlice = createSlice({
     },
 });
 
-
 export default aboutSlice.reducer;

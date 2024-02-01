@@ -41,8 +41,8 @@ function Message(props) {
     return (
         <div className="message">
             <div className="row">
-                <div className="message_mains">Есть вопросы?</div>
-                <div className="message_little">Все самое актуальное</div>
+                <div className="message_mains">{t("have")}</div>
+                <div className="message_little">{t("all")}</div>
                 <form onSubmit={handleSumbit} ref={formRef} className="message_form">
                     <input onChange={(e) =>
                         setDataContact((prev) => ({
@@ -51,8 +51,8 @@ function Message(props) {
                         }))
                     }
                            required className="message_form_inputs" type="text" name="text"
-                           placeholder="Отправьте нам сообщение"/>
-                    <button type="submit" className="message_form_sends">Отправить</button>
+                           placeholder={t("message")}/>
+                    <button type="submit" className="message_form_sends">{t("send")}</button>
                 </form>
             </div>
         </div>

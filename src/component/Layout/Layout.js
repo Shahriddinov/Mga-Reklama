@@ -3,6 +3,8 @@ import Header from "./Header/header";
 import { Outlet } from "react-router";
 import Footer from "./Footer/footer";
 import { useLocation } from "react-router";
+import angle from "../../assests/images/angle-up-solid.svg";
+import { FaAngleUp } from 'react-icons/fa';
 
 const Layout = props => {
     const { children } = props;
@@ -13,6 +15,22 @@ const Layout = props => {
 
     const changeSpeakSwitcher = value => {
         setSpeaker(value);
+    };
+    const [showTopBtn, setShowTopBtn] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                setShowTopBtn(true);
+            } else {
+                setShowTopBtn(false);
+            }
+        });
+    }, []);
+    const goToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     };
 
     useEffect(() => {
@@ -30,10 +48,17 @@ const Layout = props => {
                 <>
                         <Header speaker={speaker} changeSpeakSwitcher={changeSpeakSwitcher} />
                             <div className="page-content">{children}</div>
+                    {" "}
+                    {showTopBtn && (
+                        <button className="scrollToHome " onClick={goToTop}>
+                            <FaAngleUp color="white" />
+                        </button>
+
+                    )}{" "}
                         <Footer />
                       </>
-               
-            </div> 
+
+            </div>
         </>
     );
 };

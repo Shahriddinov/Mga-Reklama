@@ -12,25 +12,39 @@ import {IoMdArrowDropdown} from "react-icons/io";
 import {languageChange} from "../../../reduxToolkit/languageSlice";
 import {languageList} from "./data";
 import { t } from "i18next";
+import {baseUrlImg} from "../../../serves/api/utils";
+import {getSocial} from "../../../reduxToolkit/Social/social";
+import Spinner from "../../Spinner";
+import { motion } from "framer-motion";
 
 const Header = () => {
     // const { t } = useTranslation();
 
     const dispatch = useDispatch();
+    const loading = useSelector((state) => state.socialSlice.loading);
+
     const language = useSelector((state) => state.language.language);
     const [activeLang, setactiveLang] = useState(false);
     const [activeSidebar, setactiveSidebar] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
+    const socialData = useSelector((state) => state.socialSlice.socialData);
 
     const handleChangeLng = (lng) => {
         i18next.changeLanguage(lng);
         dispatch(languageChange(lng));
         setactiveLang((el) => !el);
     };
+    useEffect(() => {
+        dispatch(getSocial());
+    }, [dispatch]);
+
+    if (loading) {
+        return <Spinner />;
+    }
     return (
         <div className=" " style={{width:"100%", height:"93px", position:"fixed", zIndex:"999", display:"flex", justifyContent:"center", background:"white"}}>
             <div className="container header">
-                <Link to="/" className="header_logo">
+                <Link animate={{ scaleX: 1.2 }} to="/" className="header_logo">
                     <img className="header_logo_title" src={Logo} alt=""/>
                 </Link>
                 <ul className={openMenu ? "header_mobile" : "header_navbar"}>
@@ -38,14 +52,24 @@ const Header = () => {
                         <li className="header_navbar_nav">{t("main")}</li>
                     </Link>
                     <Link to="/company">
-                        <li className="header_navbar_nav">О компании</li>
+                        <li className="header_navbar_nav">{t("about")}</li>
                     </Link>
-                    <Link to="/services">
-                        <li className="header_navbar_nav">НАши услуги</li>
+                    <Link to="/gallery">
+                        <li className="header_navbar_nav">{t("gallery")}</li>
+                    </Link>
+                    <Link to="/board">
+                        <li className="header_navbar_nav">{t("art")}</li>
                     </Link>
                     <Link to="/contact">
-                        <li className="header_navbar_nav">Контакты</li>
+                        <li className="header_navbar_nav">{t("contact")}</li>
                     </Link>
+                    <div style={{display:"flex", justifyContent:"center", gap:"20px", alignItems:"center"}}>
+                        {socialData.map((item, index)=>(
+                            <motion.div whileTap={{ scale: 0.85 }} key={index} className="footer_links">
+                                <li><a target="_blank" href={item.url}> <img className="footer_links_ico" src={`${baseUrlImg}/${item.icon}`} alt=""/></a></li>
+                            </motion.div>
+                        ))}
+                    </div>
                     <div className="header_navbar_language">
                         <div
                             className="header_navbar_language-wrapper"
@@ -72,6 +96,7 @@ const Header = () => {
                             ))}
                         </div>
                     </div>
+
                 </ul>
                 <img onClick={() => setOpenMenu(!openMenu)} className="header_burger" src={burger} alt=""/>
             </div>

@@ -15,7 +15,6 @@ import { t } from "i18next";
 import {baseUrlImg} from "../../../serves/api/utils";
 import {getSocial} from "../../../reduxToolkit/Social/social";
 import Spinner from "../../Spinner";
-import { motion } from "framer-motion";
 
 const Header = () => {
     // const { t } = useTranslation();
@@ -42,46 +41,52 @@ const Header = () => {
         return <Spinner />;
     }
     return (
-        <div className=" " style={{width:"100%", height:"93px", position:"fixed", zIndex:"999", display:"flex", justifyContent:"center", background:"white"}}>
-            <div className="container header">
-                <Link animate={{ scaleX: 1.2 }} to="/" className="header_logo">
-                    <img className="header_logo_title" src={Logo} alt=""/>
+        <div className="h" >
+            <div className="container h_header">
+                <Link  to="/" className="h_header_logo">
+                    <img  className="h_header_logo_title" src={Logo} alt=""/>
                 </Link>
-                <ul className={openMenu ? "header_mobile" : "header_navbar"}>
+                <ul className={openMenu ? "h_header_mobile" : "h_header_navbar"}>
                     <Link to="/">
-                        <li className="header_navbar_nav">{t("main")}</li>
+                        <li
+                        
+                            className="h_header_navbar_nav">{t("main")}</li>
                     </Link>
                     <Link to="/company">
-                        <li className="header_navbar_nav">{t("about")}</li>
+                        <li
+
+                            className="h_header_navbar_nav">{t("about")}</li>
                     </Link>
                     <Link to="/gallery">
-                        <li className="header_navbar_nav">{t("gallery")}</li>
+                        <li
+
+                            className="h_header_navbar_nav">{t("gallery")}</li>
                     </Link>
                     <Link to="/board">
-                        <li className="header_navbar_nav">{t("art")}</li>
+                        <li   className="h_header_navbar_nav">{t("art")}</li>
                     </Link>
                     <Link to="/contact">
-                        <li className="header_navbar_nav">{t("contact")}</li>
+                        <li   className="h_header_navbar_nav">{t("contact")}</li>
                     </Link>
                     <div style={{display:"flex", justifyContent:"center", gap:"20px", alignItems:"center"}}>
                         {socialData.map((item, index)=>(
-                            <motion.div whileTap={{ scale: 0.85 }} key={index} className="footer_links">
+                            <div  className="footer_links">
                                 <li><a target="_blank" href={item.url}> <img className="footer_links_ico" src={`${baseUrlImg}/${item.icon}`} alt=""/></a></li>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
-                    <div className="header_navbar_language">
+                    <div className="h_header_navbar_language">
                         <div
-                            className="header_navbar_language-wrapper"
+                            className="h_header_navbar_language-wrapper"
                             onClick={() => setactiveLang((el) => !el)}
                         >
-                            <CiGlobe className="header_navbar_language-icon"/>
+                            <CiGlobe className="h_header_navbar_language-icon"/>
                             <span style={{color: "white"}}>
                 {languageList.find((lan) => lan.type === language)?.label}
               </span>
-                            <IoMdArrowDropdown className="header_navbar_language-iconArrow"/>
+                            <IoMdArrowDropdown className="h_header_navbar_language-iconArrow"/>
                         </div>
-                        <div className="header_navbar_language-bar"
+                        <div className="h_header_navbar_language-bar"
                             style={activeLang ? {display: "flex"} : null}
                         >
                             {languageList.map((el, index) => (
@@ -98,7 +103,7 @@ const Header = () => {
                     </div>
 
                 </ul>
-                <img onClick={() => setOpenMenu(!openMenu)} className="header_burger" src={burger} alt=""/>
+                <img onClick={() => setOpenMenu(!openMenu)} className="h_header_burger" src={burger} alt=""/>
             </div>
         </div>
     );

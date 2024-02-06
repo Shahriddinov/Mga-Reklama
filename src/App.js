@@ -9,7 +9,7 @@ const Home = lazy(() => import("./page/Home/home"));
 const AboutCompany = lazy(() => import("./page/AboutCompany/AboutCompany"));
 const gallery = lazy(() => import("./page/Gallery/gallery"));
 const Contact = lazy(()=> import("./page/Contact/contact"))
-const ArtBoard = lazy(()=> import("./page/ArtBoard/artBoard"))
+const ArtBoard = lazy(()=> import("./page/Board/board"))
 const routes = [
     {path: "/", element: Home},
     {path: "/company", element: AboutCompany},

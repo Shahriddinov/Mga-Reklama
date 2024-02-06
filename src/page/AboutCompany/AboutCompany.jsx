@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import "./aboutCompany.scss";
-import images18 from "../../assests/images/12112.png";
+import images18 from "../../assests/images/Безымянный-1.jpg";
 import about from "../../assests/images/about.png";
 import imageOne from "../../assests/images/image 3.png"
 import imageTwo from "../../assests/images/Rectangle 4.png"

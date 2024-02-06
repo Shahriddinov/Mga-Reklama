@@ -135,7 +135,7 @@ function Contact(props) {
                                             ...prev,
                                             phone: e.target.value,
                                         }))} className="contact_contactRow_contactForm_conInput_labels_int" type="number"
-                                           name="number" placeholder="+998 90 123 45 67"/>
+                                           name="number" placeholder="Tel"/>
                                 </label>
                                 <label className="contact_contactRow_contactForm_conInput_labels">{t("description")}
                                     <textarea onChange={(e) =>

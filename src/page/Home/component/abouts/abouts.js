@@ -17,9 +17,7 @@ function Abouts(props) {
         dispatch(getYou());
     }, [dispatch,lan]);
 
-    if (loading) {
-        return <Spinner />;
-    }
+
     return (
         <div className="abouts">
             <div className="row">

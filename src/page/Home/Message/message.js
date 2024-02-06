@@ -5,6 +5,7 @@ import {sendFullContact} from "../../../reduxToolkit/SendQuetion/sendQuetion";
 import {ToastContainer, toast} from "react-toastify";
 import {resetContact} from "../../../reduxToolkit/SendQuetion";
 import {t} from "i18next";
+import { motion } from "framer-motion"
 
 function Message(props) {
     const dispatch = useDispatch();
@@ -52,7 +53,8 @@ function Message(props) {
                     }
                            required className="message_form_inputs" type="text" name="text"
                            placeholder={t("message")}/>
-                    <button type="submit" className="message_form_sends">{t("send")}</button>
+                    <motion.button
+                        whileTap={{ scale: 0.9 }} type="submit" className="message_form_sends">{t("send")}</motion.button>
                 </form>
             </div>
         </div>

@@ -53,9 +53,7 @@ export default function AboutHome() {
         dispatch(getAbout());
     }, [dispatch, lan]);
 
-    if (loading) {
-        return <Spinner/>;
-    }
+
 
     return (
         <div className="aboutCompany">

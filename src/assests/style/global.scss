@@ -32,8 +32,9 @@ a {
   color: white;
 }
 .scrollToHome{
-    background-color: #25333b;
+    background-color: #f5c34b;
   border-radius: 6px;
+  border: none;
   bottom: 5%;
   color: #ffffff;
   display: flex;
@@ -49,7 +50,6 @@ a {
   z-index: 9;
   font-size: 20px;
   transform: scale(1);
-  border: 1px solid #25333b;
   cursor: pointer;
   &_show{
     width: 30px;

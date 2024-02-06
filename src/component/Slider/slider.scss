@@ -6,23 +6,24 @@
   justify-content: center;
   &_cc{
     width: 20%;
-    height: 180px;
+    height: 80px;
     border: 1px solid #25333b;
     align-items: center;
-    display: flex;
+    display: flex!important;
     justify-content: center;
     padding: 10px;
+    border-radius: 16px;
     margin-bottom: 30px;
 
     &_sliderImg{
       width: 50%;
+      display: flex;
+      margin: 0 auto;
 
     }
   }
 }
-.swiper-slide{
-  width: 280px!important;
-}
+
 @media (max-width: 562px) {
   .slider{
     width: 90%;

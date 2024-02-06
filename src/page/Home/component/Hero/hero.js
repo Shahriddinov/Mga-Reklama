@@ -42,9 +42,7 @@ const Hero = ({ sliderData, error, loading }) => {
         return () => clearInterval(slideInterval);
     }, [slideIndex, sliderData]);
 
-    if (loading) {
-        return <Spinner position="full" />;
-    }
+
 
     if (error) {
         return <p className="">{error}</p>;

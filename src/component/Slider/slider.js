@@ -1,12 +1,9 @@
 import React, {useEffect} from 'react';
-import {Autoplay, Pagination, Scrollbar, A11y} from 'swiper/modules';
-
-import {Swiper, SwiperSlide,} from 'swiper/react';
-import "./slider.scss";
+import {Swiper, SwiperSlide} from 'swiper/react';
+import "./slider.scss"
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import {Pagination, Navigation, Autoplay} from 'swiper/modules';
 import Slider1 from "../../assests/images/slider1.png"
 import Slider2 from "../../assests/images/slider2.png"
 import Slider3 from "../../assests/images/slider3.png"
@@ -18,6 +15,7 @@ import {getYou} from "../../reduxToolkit/youTube/youTube";
 import Spinner from "../Spinner";
 import {getPartner} from "../../reduxToolkit/Partner/partner";
 import {baseUrlImg} from "../../serves/api/utils";
+import { t } from "i18next";
 
 function Slider(props) {
     const dispatch = useDispatch();
@@ -34,26 +32,43 @@ function Slider(props) {
         dispatch(getPartner());
     }, [dispatch, lan]);
 
-    if (loading) {
-        return <Spinner/>;
-    }
+
 
     return (
-        <div className="slider">
+        <>
+            <div className="slider">
 
-            <div className="row" style={{ display: "flex", flexWrap:"wrap", justifyContent:"center"}}>
-                {
-                    datas?.map((items, index) => (
-                        <a href={items.url} target="_blank" key={index} className="slider_cc">
-                                    <img key={index}  className="slider_cc_sliderImg"
-                                         src={`${baseUrlImg}/${items.image}`}
-                                         alt=""/>
+                <div className="row" style={{ display: "flex", flexWrap:"wrap", justifyContent:"center", margin:"0 auto"}}>
+                    <h1 style={{marginBottom:"5%"}}>{t("partner")}</h1>
+                    <Swiper
+                        slidesPerView={7}
+                        spaceBetween={30}
+                        modules={[Pagination, Navigation, Autoplay]}
+                        autoplay={{
+                            delay: 1000,
+                            disableOnInteraction: false
+                        }}
+                    >
+                        {
+                            datas?.map((items, index) => (
 
-                        </a>
-                    ))
-                }
+
+                        <SwiperSlide className="slider_cc">
+                            <a href={items.url} target="_blank" key={index} >
+                                <img key={index}  className="slider_cc_sliderImg"
+                                     src={`${baseUrlImg}/${items.image}`}
+                                     alt=""/>
+
+                            </a>
+                        </SwiperSlide>
+                            ))
+                        }
+                    </Swiper>
+                </div>
+
             </div>
-        </div>
+
+        </>
 
     );
 }

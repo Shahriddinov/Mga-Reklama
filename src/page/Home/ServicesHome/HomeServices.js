@@ -19,6 +19,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {baseUrlImg} from "../../../serves/api/utils";
 
 import { t } from "i18next";
+import {motion} from "framer-motion";
 
 
 function HomeServices({servicesData, error, loading}) {
@@ -34,9 +35,6 @@ function HomeServices({servicesData, error, loading}) {
         dispatch(getServices());
     }, [dispatch,lan]);
 
-    if (loading) {
-        return <Spinner />;
-    }
 
     return (
         <div className="services">
@@ -65,7 +63,9 @@ function HomeServices({servicesData, error, loading}) {
                 <div className="row">
                     <div className="services_bad_double">
 
-                            <a href="/gallery" data-aos="fade-right"
+                            <motion.a
+                                whileTap={{ scale: 0.8 }}
+                                href="/gallery" data-aos="fade-right"
                                  data-aos-easing="ease-out-cubic"
                                  data-aos-duration="1500" className="services_bad_double_serviceAbout">
                                 <div className="zoom"></div>
@@ -75,10 +75,11 @@ function HomeServices({servicesData, error, loading}) {
 
                                 <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
                                 </div>
-                            </a>
+                            </motion.a>
 
 
-                        <a href="/gallery" data-aos="fade-down"
+                        <motion.a
+                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="fade-down"
                              data-aos-easing="ease-out-cubic"
                              data-aos-duration="1500" className="services_bad_double_serviceAbout">
                             <div className="zoom"></div>
@@ -87,8 +88,9 @@ function HomeServices({servicesData, error, loading}) {
 
                             <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
                             </div>
-                        </a>
-                        <a href="/gallery" data-aos="fade-left"
+                        </motion.a>
+                        <motion.a
+                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="fade-left"
                              data-aos-easing="ease-out-cubic"
                              data-aos-duration="1500" className="services_bad_double_serviceAbout">
                             <div className="zoom"></div>
@@ -97,10 +99,11 @@ function HomeServices({servicesData, error, loading}) {
 
                             <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
                             </div>
-                        </a>
+                        </motion.a>
                     </div>
                     <div className="services_bad_double" style={{ marginTop:"40px"}}>
-                        <a href="/gallery" data-aos="zoom-in-down"
+                        <motion.a
+                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
                              data-aos-easing="ease-out-cubic"
                              data-aos-duration="2000" className="services_bad_double_serviceAbout">
                             <div className="zoom"></div>
@@ -109,8 +112,9 @@ function HomeServices({servicesData, error, loading}) {
 
                             <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
                             </div>
-                        </a>
-                        <a href="/gallery" data-aos="zoom-in-down"
+                        </motion.a>
+                        <motion.a
+                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
                              data-aos-easing="ease-out-cubic"
                              data-aos-duration="2000" className="services_bad_double_serviceAbout">
                             <div className="zoom"></div>
@@ -118,8 +122,9 @@ function HomeServices({servicesData, error, loading}) {
                             <div className="services_bad_double_serviceAbout_laser"> {servicesData[4]?.title}</div>
                             <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
                             </div>
-                        </a>
-                        <a href="/gallery" data-aos="zoom-in-down"
+                        </motion.a>
+                        <motion.a
+                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
                              data-aos-easing="ease-out-cubic"
                              data-aos-duration="2000" className="services_bad_double_serviceAbout">
                             <div className="zoom"></div>
@@ -128,10 +133,11 @@ function HomeServices({servicesData, error, loading}) {
 
                             <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
                             </div>
-                        </a>
+                        </motion.a>
                     </div>
                     <div className="services_bad_double" style={{ marginTop:"40px"}}>
-                        <a href="/gallery" data-aos="zoom-in-down"
+                        <motion.a
+                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
                              data-aos-easing="ease-out-cubic"
                              data-aos-duration="2000" className="services_bad_double_serviceAbout">
                             <div className="zodm"></div>
@@ -140,8 +146,9 @@ function HomeServices({servicesData, error, loading}) {
 
                             <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
                             </div>
-                        </a>
-                        <a href="/gallery" data-aos="zoom-in-down"
+                        </motion.a>
+                        <motion.a
+                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
                              data-aos-easing="ease-out-cubic"
                              data-aos-duration="2000" className="services_bad_double_serviceAbout">
                             <div className="zoom"></div>
@@ -150,8 +157,9 @@ function HomeServices({servicesData, error, loading}) {
 
                             <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
                             </div>
-                        </a>
-                        <a data-aos="zoom-in-down"
+                        </motion.a>
+                        <motion.a
+                            whileTap={{ scale: 0.8 }} data-aos="zoom-in-down"
                              data-aos-easing="ease-out-cubic"
                              data-aos-duration="2000" className="services_bad_double_serviceAbout">
                             <div className="zoom"></div>
@@ -160,7 +168,7 @@ function HomeServices({servicesData, error, loading}) {
 
                             <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
                             </div>
-                        </a>
+                        </motion.a>
                     </div>
 
 

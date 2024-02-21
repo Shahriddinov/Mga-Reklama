@@ -53,9 +53,9 @@ function Slider(props) {
                             datas?.map((items, index) => (
 
 
-                        <SwiperSlide className="slider_cc">
-                            <a href={items.url} target="_blank" key={index} >
-                                <img key={index}  className="slider_cc_sliderImg"
+                        <SwiperSlide key={index} className="slider_cc">
+                            <a href={items.url} target="_blank" >
+                                <img  className="slider_cc_sliderImg"
                                      src={`${baseUrlImg}/${items.image}`}
                                      alt=""/>
 

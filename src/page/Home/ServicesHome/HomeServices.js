@@ -1,13 +1,5 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, Component} from 'react';
 import "./styles.scss";
-import images18 from "../../../assests/images/images 18.png"
-import Img1 from "../../../assests/images/arxitektura.png"
-import Img2 from "../../../assests/images/cnc.png"
-import Img3 from "../../../assests/images/laser.png"
-import Img4 from "../../../assests/images/poligrafiya.png"
-import Img5 from "../../../assests/images/tablichka.png"
-import Img6 from "../../../assests/images/uv.png"
-import Img7 from "../../../assests/images/yollandirma.png"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPlus} from '@fortawesome/free-solid-svg-icons';
 import Aos from "aos";

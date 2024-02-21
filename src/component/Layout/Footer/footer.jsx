@@ -50,8 +50,14 @@ const Footer = () => {
           </li>
         </ul>
         <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-        <div className="footer_developer">
-          Developer: <a href="https://t.me/murod2909">@murod2909</a>
+        <div className=" container footer_developer">
+          <div>
+            {" "}
+            Developer: <a href="https://t.me/murod2909">@murod2909</a>
+          </div>
+          <div style={{ color: "white" }}>
+            Copyright © 2023 MgaReklama
+          </div>
         </div>
       </div>
     </div>

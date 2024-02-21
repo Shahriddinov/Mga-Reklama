@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState, Component} from 'react';
 import "./message.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {sendFullContact} from "../../../reduxToolkit/SendQuetion/sendQuetion";

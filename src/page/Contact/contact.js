@@ -134,8 +134,8 @@ function Contact(props) {
                                         setDataContact((prev) => ({
                                             ...prev,
                                             phone: e.target.value,
-                                        }))} className="contact_contactRow_contactForm_conInput_labels_int" type="number"
-                                           name="number" placeholder="Tel"/>
+                                        }))} className="contact_contactRow_contactForm_conInput_labels_int" type="phone"
+                                           name="phone" placeholder="Tel:"/>
                                 </label>
                                 <label className="contact_contactRow_contactForm_conInput_labels">{t("description")}
                                     <textarea onChange={(e) =>

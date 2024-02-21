@@ -39,8 +39,10 @@
     }
   }
   &_developer{
-    font-size: 10px;
+    font-size: 12px;
     color: #ececec;
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 20px;
   }
 }

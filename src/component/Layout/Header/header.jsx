@@ -70,7 +70,7 @@ const Header = () => {
                     </Link>
                     <div style={{display:"flex", justifyContent:"center", gap:"20px", alignItems:"center"}}>
                         {socialData.map((item, index)=>(
-                            <div  className="footer_links">
+                            <div key={index} className="footer_links">
                                 <li><a target="_blank" href={item.url}> <img className="footer_links_ico" src={`${baseUrlImg}/${item.icon}`} alt=""/></a></li>
                             </div>
                         ))}

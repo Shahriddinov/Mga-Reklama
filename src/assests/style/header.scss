@@ -1,25 +1,41 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .h{
   width: 100%;
   height: 93px;
   position: fixed;
   z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: white;
   &_header {
     height: 93px;
     padding: 20px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: fixed;
     margin: 0 auto;
     z-index: 999;
     background: white;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     &_logo {
-      // position: relative;
       &_title {
         width: 120px;
       }
@@ -30,19 +46,24 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        //   position: absolute;
       }
     }
 
     &_navbar {
       width: 75%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       font-size: 14px;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       text-align: center;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       gap: 15px;
-      // padding-top: 15px;
+      
 
 
       &_nav {
@@ -62,6 +83,8 @@
           height: 3px;
           left: 0;
           bottom: 0;
+          -webkit-transition: width 0.35s ease 0s;
+          -o-transition: width 0.35s ease 0s;
           transition: width 0.35s ease 0s;
           position: absolute;
         }
@@ -76,8 +99,12 @@
 
         &-wrapper {
           padding: 10px 8px;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          align-items: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
           gap: 6px;
           border-radius: 12px;
           background: #25333b;
@@ -98,16 +125,25 @@
         }
 
         & > span {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          align-items: center;
-          //@include fontStyles(400, 14px, 17px, #062A49);
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+         
         }
 
         &-bar {
           display: none;
           position: absolute;
-          flex-direction: column;
-          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
           width: 75px;
           right: 0;
           top: 45px;
@@ -144,16 +180,20 @@
 
 @media (max-width: 1250px) {
  .h{
-   width: 95%;
+   width: 100%;
 
    &_header {
      max-width: 100%;
      position: static;
      z-index: 999;
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
      overflow: hidden;
      padding: 0 15px;
-     justify-content: space-between;
+     -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+             justify-content: space-between;
 
      &_navbar {
        width: 80%;
@@ -166,8 +206,12 @@
 
        &-wrapper {
          padding: 10px 8px;
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
-         align-items: center;
+         -webkit-box-align: center;
+             -ms-flex-align: center;
+                 align-items: center;
          gap: 6px;
          border-radius: 12px;
          background: #25333b;
@@ -188,16 +232,25 @@
        }
 
        & > span {
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
-         align-items: center;
-         //@include fontStyles(400, 14px, 17px, #062A49);
+         -webkit-box-align: center;
+             -ms-flex-align: center;
+                 align-items: center;
+         
        }
 
        &-bar {
          display: none;
          position: absolute;
-         flex-direction: column;
-         align-items: center;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+             -ms-flex-direction: column;
+                 flex-direction: column;
+         -webkit-box-align: center;
+             -ms-flex-align: center;
+                 align-items: center;
          width: 75px;
          right: 0;
          top: 45px;
@@ -226,16 +279,20 @@
 
 @media (max-width: 1180px) {
  .h{
-   width: 97%;
+   width: 100%;
 
    &_header {
      max-width: 100%;
      position: static;
      z-index: 999;
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
      overflow: hidden;
      padding: 0 15px;
-     justify-content: space-between;
+     -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+             justify-content: space-between;
 
      &_navbar {
        width: 80% !important;
@@ -246,8 +303,7 @@
 
      &_burger {
        display: none;
-       //margin: 0 auto;
-       // margin-right: 20px;
+      
      }
 
 
@@ -256,13 +312,19 @@
        text-align: center;
        padding: 32px;
        width: 100%;
+       -webkit-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
        transition: all 0.5s ease;
 
 
 
        &_language {
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
-         justify-content: center;
+         -webkit-box-pack: center;
+             -ms-flex-pack: center;
+                 justify-content: center;
 
          &-bar {
            margin: 0 auto;
@@ -282,9 +344,11 @@
        list-style: none;
        text-align: center;
        background: #25333b;
-       //left: 0;
+      
 
        top: 80px;
+       -webkit-transition: all 0.5s ease-out;
+       -o-transition: all 0.5s ease-out;
        transition: all 0.5s ease-out;
        width: 100%;
        height: 90vh;
@@ -303,25 +367,30 @@
 
 @media (max-width: 1125px) {
  .h{
-   width: 95%;
+   width: 100%;
 
    &_header {
      max-width: 100%;
      position: static;
      z-index: 999;
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
      overflow: hidden;
      padding: 0 15px;
-     justify-content: space-between;
+     -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+             justify-content: space-between;
 
      &_navbar {
        display: none;
      }
 
      &_burger {
+       display: -webkit-box;
+       display: -ms-flexbox;
        display: flex;
-       //margin: 0 auto;
-       // margin-right: 20px;
+     
      }
 
 
@@ -330,6 +399,8 @@
        text-align: center;
        padding: 32px;
        width: 100%;
+       -webkit-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
        transition: all 0.5s ease;
 
        &_nav {
@@ -337,8 +408,12 @@
        }
 
        &_language {
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
-         justify-content: center;
+         -webkit-box-pack: center;
+             -ms-flex-pack: center;
+                 justify-content: center;
 
          &-bar {
            margin: 0 auto;
@@ -357,9 +432,11 @@
        list-style: none;
        text-align: center;
        background: #25333b;
-       //left: 0;
+       
 
        top: 80px;
+       -webkit-transition: all 0.5s ease-out;
+       -o-transition: all 0.5s ease-out;
        transition: all 0.5s ease-out;
        width: 100%;
        height: 90vh;
@@ -378,25 +455,30 @@
 
 @media (max-width: 1120px) {
   .h{
-    width: 97%;
+    width: 100%;
 
     header {
       max-width: 100%;
       position: static;
       z-index: 999;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       overflow: hidden;
       padding: 0 15px;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 
       &_navbar {
         display: none;
       }
 
       &_burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        //margin: 0 auto;
-        // margin-right: 20px;
+       
       }
 
 
@@ -405,6 +487,8 @@
         text-align: center;
         padding: 32px;
         width: 100%;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &_nav {
@@ -412,8 +496,12 @@
         }
 
         &_language {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
 
           &-bar {
             margin: 0 auto;
@@ -435,6 +523,8 @@
         //left: 0;
 
         top: 80px;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
         width: 100%;
         height: 90vh;
@@ -452,26 +542,32 @@
 }
 
 @media (max-width: 1024px) {
-  .h{    width: 97%;
+  .h{
+    width: 100%;
 
 
     &_header {
       max-width: 100%;
       position: static;
       z-index: 999;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       overflow: hidden;
       padding: 0 15px;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 
       &_navbar {
         display: none;
       }
 
       &_burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        //margin: 0 auto;
-        // margin-right: 20px;
+       
       }
 
 
@@ -481,6 +577,8 @@
         padding: 32px;
         width: 85%;
         margin-top: 0;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &_nav {
@@ -488,8 +586,12 @@
         }
 
         &_language {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
 
           &-bar {
             margin: 0 auto;
@@ -508,9 +610,11 @@
         list-style: none;
         text-align: center;
         background: #25333b;
-        //left: 0;
+      
 
         top: 80px;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
         width: 100%;
         height: 90vh;
@@ -529,24 +633,29 @@
 
 @media (max-width: 900px) {
   .h{
-    width: 95%;
+    width: 100%;
     &_header {
       max-width: 100%;
       position: static;
       z-index: 999;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       overflow: hidden;
       padding: 0 15px;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 
       &_navbar {
         display: none;
       }
 
       &_burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        //margin: 0 auto;
-        // margin-right: 20px;
+       
       }
 
 
@@ -555,6 +664,8 @@
         text-align: center;
         padding: 32px;
         width: 100%;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &_nav {
@@ -562,8 +673,12 @@
         }
 
         &_language {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
 
           &-bar {
             margin: 0 auto;
@@ -582,9 +697,11 @@
         list-style: none;
         text-align: center;
         background: #25333b;
-        //left: 0;
+        
 
         top: 80px;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
         width: 100%;
         height: 90vh;
@@ -603,24 +720,29 @@
 
 @media (max-width: 832px) {
   .h{
-    width: 97%;
+    width: 100%;
     &_header {
       max-width: 100%;
       position: static;
       z-index: 999;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       overflow: hidden;
       padding: 0 15px;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 
       &_navbar {
         display: none;
       }
 
       &_burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        //margin: 0 auto;
-        // margin-right: 20px;
+        
       }
 
 
@@ -629,6 +751,8 @@
         text-align: center;
         padding: 32px;
         width: 100%;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &_nav {
@@ -636,8 +760,12 @@
         }
 
         &_language {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
 
           &-bar {
             margin: 0 auto;
@@ -656,9 +784,11 @@
         list-style: none;
         text-align: center;
         background: #25333b;
-        //left: 0;
+       
 
         top: 80px;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
         width: 100%;
         height: 90vh;
@@ -681,19 +811,24 @@
       max-width: 100%;
       position: static;
       z-index: 999;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       overflow: hidden;
       padding: 0 15px;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 
       &_navbar {
         display: none;
       }
 
       &_burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        //margin: 0 auto;
-        // margin-right: 20px;
+        
       }
 
 
@@ -702,6 +837,8 @@
         text-align: center;
         padding: 32px;
         width: 100%;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &_nav {
@@ -709,8 +846,12 @@
         }
 
         &_language {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
 
           &-bar {
             margin: 0 auto;
@@ -729,9 +870,11 @@
         list-style: none;
         text-align: center;
         background: #25333b;
-        //left: 0;
+       
 
         top: 80px;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
         width: 100%;
         height: 90vh;
@@ -756,19 +899,24 @@
       max-width: 100%;
       position: static;
       z-index: 999;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       overflow: hidden;
       padding: 0 15px;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 
       &_navbar {
         display: none;
       }
 
       &_burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        //margin: 0 auto;
-        // margin-right: 20px;
+        
       }
 
 
@@ -777,6 +925,8 @@
         text-align: center;
         padding: 32px;
         width: 100%;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &_nav {
@@ -784,8 +934,12 @@
         }
 
         &_language {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
 
           &-bar {
             margin: 0 auto;
@@ -807,6 +961,8 @@
         //left: 0;
 
         top: 80px;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
         width: 100%;
         height: 90vh;
@@ -830,19 +986,24 @@
       max-width: 100%;
       position: static;
       z-index: 999;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       overflow: hidden;
       padding: 0 15px;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 
       &_navbar {
         display: none;
       }
 
       &_burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        //margin: 0 auto;
-        // margin-right: 20px;
+      
       }
 
 
@@ -851,6 +1012,8 @@
         text-align: center;
         padding: 32px;
         width: 100%;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &_nav {
@@ -858,8 +1021,12 @@
         }
 
         &_language {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
 
           &-bar {
             margin: 0 auto;
@@ -878,9 +1045,10 @@
         list-style: none;
         text-align: center;
         background: #25333b;
-        //left: 0;
 
         top: 80px;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
         width: 100%;
         height: 90vh;
@@ -905,19 +1073,24 @@
       max-width: 100%;
       position: static;
       z-index: 999;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       overflow: hidden;
       padding: 0 15px;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
 
       &_navbar {
         display: none;
       }
 
       &_burger {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        //margin: 0 auto;
-        // margin-right: 20px;
+       
       }
 
 
@@ -926,6 +1099,8 @@
         text-align: center;
         padding: 32px;
         width: 100%;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &_nav {
@@ -933,8 +1108,12 @@
         }
 
         &_language {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
 
           &-bar {
             margin: 0 auto;
@@ -954,6 +1133,8 @@
         text-align: center;
         background: #25333b;
         top: 80px;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
         width: 50%;
         height: 90vh;

@@ -1,13 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import "./gallery.scss";
-import images18 from "../../assests/images/12112.png"
-import Img1 from "../../assests/images/arxitektura.png"
-import Img2 from "../../assests/images/cnc.png"
-import Img3 from "../../assests/images/laser.png"
-import Img4 from "../../assests/images/poligrafiya.png"
-import Img5 from "../../assests/images/tablichka.png"
-import Img6 from "../../assests/images/uv.png"
-import Img7 from "../../assests/images/yollandirma.png"
+import images18 from "../../assests/images/gallery.png"
+
 import Message from "../Home/Message/message";
 import Slider from "../../component/Slider/slider";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -49,7 +43,6 @@ function Gallery(props) {
             <div className="gallery">
                <div style={{position:"relative"}}>
                    <img className="gallery_imgGallery" src={images18} alt=""/>
-                   <div className="blur">{t("gallery")}</div>
                </div>
                 <div className="gallery_bos">
                     <div className="row">

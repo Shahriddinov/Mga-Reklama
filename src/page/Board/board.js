@@ -3,7 +3,7 @@ import Message from "../Home/Message/message";
 import Slider from "../../component/Slider/slider";
 import DD from "../../assests/images/DDD.jpg"
 import "./artBoard.scss"
-import PDF from "../../assests/images/ДОГОВОР_ОКАЗАНИЯ_УСЛУГ BUXORO.docx"
+import PDF from "../../assests/images/ДОГОВОР_ОКАЗАНИЯ_УСЛУГ BUXORO.pdf"
 function Board(props) {
     return (
 

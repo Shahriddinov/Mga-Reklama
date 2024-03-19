@@ -1,9 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import "./abourts.scss"
-import image4 from "../../../../assests/images/image 4.png"
-import image5 from "../../../../assests/images/image 5.png"
 import {useDispatch, useSelector} from "react-redux";
-import Spinner from "../../../../component/Spinner";
 import {getYou} from "../../../../reduxToolkit/youTube/youTube";
 
 function Abouts(props) {

@@ -4,15 +4,7 @@ import "./slider.scss"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import {Pagination, Navigation, Autoplay} from 'swiper/modules';
-import Slider1 from "../../assests/images/slider1.png"
-import Slider2 from "../../assests/images/slider2.png"
-import Slider3 from "../../assests/images/slider3.png"
-import Slider4 from "../../assests/images/slider4.png"
-import Slider5 from "../../assests/images/slider5.png"
-import Slider6 from "../../assests/images/slider6.png"
 import {useDispatch, useSelector} from "react-redux";
-import {getYou} from "../../reduxToolkit/youTube/youTube";
-import Spinner from "../Spinner";
 import {getPartner} from "../../reduxToolkit/Partner/partner";
 import {baseUrlImg} from "../../serves/api/utils";
 import { t } from "i18next";

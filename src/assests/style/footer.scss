@@ -1,163 +1,221 @@
+
 .footer {
   display: flex;
   height: auto;
-  // height: 300px;
   justify-content: center;
   align-items: center;
-  background: #25333b;
+  overflow: hidden;
   margin-top: 30px;
-  &_link {
-    color: white;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
-    margin-top: 40px;
+  margin-bottom: 30px;
 
-    li {
-      cursor: pointer;
-    }
-  }
-  &_brandIcon{
-    margin-top: 40px;
-  }
-  &_brand {
-    display: none;
-  }
-  &_links{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-
-    &_ico{
-      width: 26px;
-      height: 25px;
-    }
-  }
-  &_developer{
-    font-size: 12px;
-    color: #ececec;
+  &_df {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
-  }
-}
-@media (max-width: 562px) {
-  .footer {
+    &_cardFooter {
+      width: 23%;
+      height: auto;
+      border: 1px solid white;
+      margin-top: 20px;
+
+      &_brand {
+        width: 50%;
+        //height: 40%;
+        margin: 0 auto;
+      }
+
+      &_FTitle {
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 20px;
+        font-style: normal;
+        line-height: 1.6;
+      }
+
+      &_link {
+        font-weight: 400;
+        font-size: 16px;
+        font-style: normal;
+        line-height: normal;
+        margin-top: 40px;
+        display: grid;
+        gap: 15px;
+
+        li {
+          cursor: pointer;
+          display: flex;
+          gap: 10px;
+
+          a {
+            color: #25333b;
+          }
+        }
+
+        &_FImg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      &_Fserver {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        margin-top: 10px;
+        display: grid;
+        gap: 15px;
+
+        li {
+          cursor: pointer;
+
+          a {
+            color: #010101;
+          }
+        }
+      }
+
+    }
+
+
     &_brandIcon {
-      display: none;
+      margin-top: 40px;
     }
-    &_brand {
-      margin-top: 50px;
-      display: flex;
-      color: white;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 900;
 
-      line-height: normal;
-      text-transform: uppercase;
+    &_links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      &_ico {
+        width: 26px;
+        height: 25px;
+      }
     }
-    &_link{
-      align-items: center;
-      flex-direction: column;
-    }
+
 
   }
+  &_developer {
+    font-size: 12px;
+    color: #25333B;
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+  }
+
 }
-@media (max-width: 832px) {
+
+@media (max-width: 576px) {
   .footer {
-    &_brandIcon {
-      display: none;
-    }
-    &_brand {
-      margin-top: 50px;
-      display: flex;
-      color: white;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 900;
 
-      line-height: normal;
-      text-transform: uppercase;
-    }
-    &_link{
-      align-items: center;
+    overflow: hidden;
+    &_df {
+      display:flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &_cardFooter{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        &_brand{
+          display: flex;
+          margin: 0 auto;
+        }
+        &_FTitle{
+          display: flex;
+          text-align: center;
+        }
+        &_link{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
     }
+
+
+
+
 
   }
 }
-@media (max-width: 900px) {
-  .footer {
-    &_brandIcon {
-      display: none;
-    }
-    &_brand {
-      margin-top: 50px;
-      display: flex;
-      color: white;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 900;
 
-      line-height: normal;
-      text-transform: uppercase;
-    }
-    &_link{
-      align-items: center;
-      flex-direction: column;
-    }
+//@media (min-width: 577px) and (max-width: 768px) {
+//  .footer {
+//    &_brandIcon {
+//      display: none;
+//    }
+//
+//    &_brand {
+//      margin-top: 50px;
+//      display: flex;
+//      color: white;
+//      font-size: 28px;
+//      font-style: normal;
+//      font-weight: 900;
+//
+//      line-height: normal;
+//      text-transform: uppercase;
+//    }
+//
+//    &_link {
+//      align-items: center;
+//      flex-direction: column;
+//    }
+//
+//  }
+//}
+//
+//@media (min-width: 769px) and (max-width: 992px) {
+//  .footer {
+//    &_brandIcon {
+//      display: none;
+//    }
+//
+//    &_brand {
+//      margin-top: 50px;
+//      display: flex;
+//      color: white;
+//      font-size: 28px;
+//      font-style: normal;
+//      font-weight: 900;
+//
+//      line-height: normal;
+//      text-transform: uppercase;
+//    }
+//
+//    &_link {
+//      align-items: center;
+//      flex-direction: column;
+//    }
+//
+//  }
+//}
+//
+//@media (min-width: 993px) and (max-width: 1200px) {
+//  .footer {
+//    &_brandIcon {
+//      display: none;
+//    }
+//
+//    &_brand {
+//      margin-top: 50px;
+//      display: flex;
+//      color: white;
+//      font-size: 28px;
+//      font-style: normal;
+//      font-weight: 900;
+//
+//      line-height: normal;
+//      text-transform: uppercase;
+//    }
+//
+//    &_link {
+//      align-items: center;
+//      flex-direction: column;
+//    }
+//
+//  }
+//}
 
-  }
-}
-@media (max-width: 1024px) {
-  .footer {
-    &_brandIcon {
-      display: none;
-    }
-    &_brand {
-      margin-top: 50px;
-      display: flex;
-      color: white;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 900;
-
-      line-height: normal;
-      text-transform: uppercase;
-    }
-    &_link{
-      align-items: center;
-      flex-direction: column;
-    }
-
-  }
-}
-@media (max-width: 1120px) {
-  .footer {
-    &_brandIcon {
-      display: none;
-    }
-    &_brand {
-      margin-top: 50px;
-      display: flex;
-      color: white;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 900;
-
-      line-height: normal;
-      text-transform: uppercase;
-    }
-    &_link{
-      align-items: center;
-      flex-direction: column;
-    }
-
-  }
-}

@@ -77,15 +77,18 @@
         justify-content: center;
         overflow: hidden;
         gap: 30px;
+        position: relative;
         border-radius: 24px;
         transform: scale(1); /* Adjust the scale factor for zoom effect */
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
         &:hover {
-
           color: #25333B;
           cursor: pointer;
 
+          &_seven:hover {
+            transform: scale(1.1);
+          }
 
         }
 
@@ -109,6 +112,7 @@
           background-repeat: no-repeat;
           background-size: cover;
           object-fit: cover;
+          transition: transform 0.3s ease;
         }
 
         &_laser {

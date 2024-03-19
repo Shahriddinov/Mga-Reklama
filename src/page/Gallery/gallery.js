@@ -4,12 +4,7 @@ import images18 from "../../assests/images/gallery.png"
 
 import Message from "../Home/Message/message";
 import Slider from "../../component/Slider/slider";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faPlus} from '@fortawesome/free-solid-svg-icons';
 import Aos from "aos";
-import Typical from 'react-typical';
-import TextAnimation from "react-text-animations";
-import {getServices} from "../../reduxToolkit/Services/services";
 import Spinner from "../../component/Spinner";
 import {useDispatch, useSelector} from "react-redux";
 import {baseUrlImg} from "../../serves/api/utils";
@@ -49,10 +44,10 @@ function Gallery(props) {
                         <div style={{display: "flex", flexWrap:"wrap", justifyContent:"space-between"}}>
                             {galleryData.map((item, index) => (
 
-                                <div key={index} className="gallery_bos_GGG">
+                                <div key={index} className="gallery_bos_GGG relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                                     <ModalImage
                                         style={{ width: '300px', height: '200px' }}
-                                        className="gallery_bos_GGG_pho"
+                                        className="gallery_bos_GGG_pho max-w-xs transition duration-300 ease-in-out hover:scale-110"
                                         small={`${baseUrlImg}/${item.photo}`}
                                         large={`${baseUrlImg}/${item.photo}`}
                                         alt="Hello World!"

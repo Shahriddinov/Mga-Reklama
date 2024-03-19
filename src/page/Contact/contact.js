@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import "./contact.scss";
-import images18 from "../../assests/images/images 18.png"
+import images18 from "../../assests/images/6.png"
 import call from "../../assests/images/call_talking.svg"
 import email from "../../assests/images/email_outlined.svg"
 import home from "../../assests/images/home_vs_2_outlined.svg"
@@ -77,7 +77,7 @@ function Contact(props) {
             <div className="contact_headers">
                 {t("contact")}
             </div>
-            <div className="contact_headersText"></div>
+            <div className="contact_headersText">{t("help")}</div>
             <div className="contact_contactRow">
                 <div className="row">
                     {/*<a href={`tel:${contactData.phone}`}>{contactData.phone}</a>*/}
@@ -103,7 +103,7 @@ function Contact(props) {
                                 <img className="contact_contactRow_contain_socialsCard_contactImg" src={home} alt=""/>
                                 <div className="contact_contactRow_contain_socialsCard_numberss">Адресс</div>
                                 <div className="contact_contactRow_contain_socialsCard_numb" >
-                                    <a target="_blank" style={{color:"#25333b"}} href="tel:+998770124004">Яшнабадский Район Улица Элбека дом 61 Текнопарк Д 30
+                                    <a target="_blank" style={{color:"#25333b"}}>{t("address")}
                                     </a>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@ function Contact(props) {
                                             ...prev,
                                             phone: e.target.value,
                                         }))} className="contact_contactRow_contactForm_conInput_labels_int" type="phone"
-                                           name="phone" placeholder="Tel:"/>
+                                           name="phone" placeholder="Phone:"/>
                                 </label>
                                 <label className="contact_contactRow_contactForm_conInput_labels">{t("description")}
                                     <textarea onChange={(e) =>

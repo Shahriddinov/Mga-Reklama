@@ -6,9 +6,9 @@
   "art": "art board",
   "services": "Services",
   "name": "Name",
-  "writeName": "Enter your name",
-  "writeLastName": "Enter last name",
-  "number": "Enter your phone number",
+  "writeName": "First Name",
+  "writeLastName": "Last Name",
+  "number": "Phone Number",
   "lastName": "Last Name",
   "description": "Description",
   "have": "Have questions?",
@@ -16,5 +16,7 @@
   "send": "Send",
   "partner": "Our partners",
   "test_sayt": "The site was launched on a trial basis",
-  "message": "Send us a message"
+  "message": "Send us a message",
+  "address": "Yashnabad District Elbek Street Building 61 Technopark D 30",
+  "help": "We are always ready to help you. To contact us, you can call us or send us an email."
 }

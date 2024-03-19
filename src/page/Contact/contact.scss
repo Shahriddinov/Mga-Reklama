@@ -1,6 +1,13 @@
 .contact {
   overflow: hidden;
-
+&_headImg{
+  width: 100%;
+  height: 600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
   &_headers {
     font-size: 30px;
     font-style: normal;
@@ -14,9 +21,8 @@
   &_headersText {
     text-align: center;
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     margin-bottom: 56px;
   }
@@ -34,8 +40,9 @@
 
       &_socialsCard {
         width: 26%;
+        //height: 0;
+        margin-top: 30px;
         background: #FFF;
-        height: 30ModalImage 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -138,7 +145,8 @@
   .contact {
     &_headImg {
       width: 100%;
-      height: 300px;
+      object-fit: contain!important;
+
     }
     &_contactRow{
       &_contain{
@@ -179,6 +187,7 @@
  .contact {
     &_headImg {
       width: 100%;
+      object-fit: contain!important;
       height: 300px;
     }
     &_contactRow{
@@ -220,6 +229,7 @@
  .contact {
     &_headImg {
       width: 100%;
+      object-fit: contain!important;
       height: 300px;
     }
     &_contactRow{
@@ -261,6 +271,7 @@
  .contact {
     &_headImg {
       width: 100%;
+      object-fit: contain!important;
       height: 300px;
     }
     &_contactRow{
@@ -302,6 +313,7 @@
  .contact {
     &_headImg {
       width: 100%;
+      object-fit: contain!important;
       height: 300px;
     }
     &_contactRow{

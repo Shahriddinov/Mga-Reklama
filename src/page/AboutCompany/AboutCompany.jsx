@@ -56,9 +56,9 @@ export default function AboutCompany() {
               <div className="aboutCompany_fl_comp_ImgT">
                 <div className="aboutCompany_fl_comp_ImgT_full">
                   <div
-                    data-aos="flip-left"
+                    data-aos="fade-down"
                     data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000"
+                    data-aos-duration="1500"
                     className="aboutCompany_fl_comp_ImgT_full_com"
                   >
                     {item.title}

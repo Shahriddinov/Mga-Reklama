@@ -13,11 +13,12 @@
     display: flex!important;
     justify-content: center;
     padding: 10px;
+    cursor: pointer;
     border-radius: 16px;
     margin-bottom: 30px;
 
     &_sliderImg{
-      width: 50%;
+      width: 80%;
       display: flex;
       margin: 0 auto;
 

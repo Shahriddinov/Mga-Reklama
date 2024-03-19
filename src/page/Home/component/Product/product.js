@@ -1,8 +1,5 @@
 import React, {useEffect} from 'react';
 import "./product.scss"
-import Car from "../../../../assests/images/car.png"
-import Image from "../../../../assests/images/image.png"
-import Image7 from "../../../../assests/images/image 7.png"
 import {useDispatch, useSelector} from "react-redux";
 import {getAbout} from "../../../../reduxToolkit/About/About";
 import Spinner from "../../../../component/Spinner";

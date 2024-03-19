@@ -1,66 +1,92 @@
-import React, { useEffect } from "react";
-import icon from "../../../assests/images/SVG.svg";
-import youtube from "../../../assests/images/youtube.svg";
-import web from "../../../assests/images/web.svg";
-import twettir from "../../../assests/images/twettir.svg";
-import snap from "../../../assests/images/snap.svg";
-import picture from "../../../assests/images/picture.svg";
-import { Link } from "react-router-dom";
-import Spinner from "../../Spinner";
-import { getSocial } from "../../../reduxToolkit/Social/social";
-import { useDispatch, useSelector } from "react-redux";
-import { getMagazine } from "../../../reduxToolkit/Magazine/magazine";
-import { baseUrlImg } from "../../../serves/api/utils";
-import { t } from "i18next";
-
+import React, {useEffect} from "react";
+import logo from "../../../assests/images/Log.png"
+import {t} from "i18next";
+import {useDispatch, useSelector} from "react-redux";
+import {getServices} from "../../../reduxToolkit/Services/services";
+import email from "../../../assests/images/email_outlined.svg"
+import home from "../../../assests/images/home_vs_2_outlined.svg"
+import phone from "../../../assests/images/call_talking.svg"
 const Footer = () => {
-  // const dispatch = useDispatch();
-  // const lan = useSelector((state) => state.language.language);
-  // const loading = useSelector((state) => state.socialSlice.loading);
-  // const socialData = useSelector((state) => state.socialSlice.socialData);
-  //
-  //
-  // useEffect(() => {
-  //     dispatch(getSocial());
-  // }, [dispatch]);
-  //
-  // if (loading) {
-  //     return <Spinner />;
-  // }
-  return (
-    <div className="footer">
-      <div className="row">
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <a href="#">
-            <div className="footer_brand">MGAREKLAMA</div>
-          </a>
+    const lan = useSelector((state) => state.language.language);
+    const dispatch = useDispatch();
+    const error = useSelector((state) => state.sliderSlice.error);
+    const loading = useSelector((state) => state.sliderSlice.loading);
+    const servicesData = useSelector((state) => state.servicesSlider.servicesData);
+    useEffect(() => {
+        dispatch(getServices());
+    }, [dispatch,lan]);
+    return (
+        <div className="footer">
+            <div className="row">
+                <div className="footer_df">
+                    <div className="footer_df_cardFooter">
+                        <a href="#">
+                            <img className="footer_df_cardFooter_brand" src={logo} alt="logo"/>
+                        </a>
+                        <div className="footer_df_cardFooter_FTitle">
+                            {t("help")}
+                        </div>
+                    </div>
+                    <div className="footer_df_cardFooter">
+                        <div>Institutsional</div>
+                        <ul className="footer_df_cardFooter_link">
+                          <li key="1">
+                            <a href="/">{t("main")}</a>
+                          </li>
+                          <li key="2">
+                            <a href="/company">{t("about")}</a>
+                          </li>
+                          <li key="3">
+                            <a href="/services">{t("services")}</a>
+                          </li>
+                          <li key="4">
+                            <a href="/contact">{t("contact")}</a>
+                          </li>
+                        </ul>
+                    </div>
+                    <div className="footer_df_cardFooter">
+                        <div style={{marginBottom:"40px"}}>{t("services")}</div>
+                        {servicesData.map((item, id)=>(
+                            <ul className="footer_df_cardFooter_Fserver">
+                                <li>
+                                    <a href="/gallery">{item.title}</a>
+                                </li>
+                            </ul>
+                        ))}
+                    </div>
+                    <div className="footer_df_cardFooter">
+                        <div>{t("contact")}</div>
+                        <ul className="footer_df_cardFooter_link">
+                            <li>
+                                <img className="footer_df_cardFooter_link_FImg" src={home} alt=""/>
+                                <a>{t("address")}</a>
+                            </li>
+                            <li>
+                                <img className="footer_df_cardFooter_link_FImg" src={phone} alt=""/>
+                                <a>+998770124004</a>
+                            </li>
+                            <li>
+                                <img className="footer_df_cardFooter_link_FImg" src={email} alt=""/>
+                                <a>info@mgareklama.com</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div className=" container footer_developer">
+                    {/*<div>*/}
+                    {/*  {" "}*/}
+                    {/*  Developer: <a href="https://t.me/murod2909">@murod2909</a>*/}
+                    {/*</div>*/}
+                    <div>
+                        Copyright © 2023 MgaReklama
+                    </div>
+                </div>
+            </div>
         </div>
-        <ul className="footer_link">
-          <li>
-            <a href="/">{t("main")}</a>
-          </li>
-          <li>
-            <a href="/company">{t("about")}</a>
-          </li>
-          <li>
-            <a href="/services">{t("services")}</a>
-          </li>
-          <li>
-            <a href="/contact">{t("contact")}</a>
-          </li>
-        </ul>
-        <hr style={{ marginTop: "20px", marginBottom: "20px" }} />
-        <div className=" container footer_developer">
-          <div>
-            {" "}
-            Developer: <a href="https://t.me/murod2909">@murod2909</a>
-          </div>
-          <div style={{ color: "white" }}>
-            Copyright © 2023 MgaReklama
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 export default Footer;

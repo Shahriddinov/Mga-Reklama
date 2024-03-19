@@ -1,18 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,700&family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@600&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-   font-family: "avertabold", sans-serif;
   list-style: none;
 }
 
 body {
-   font-size: 14px;
+  font-family: "IBM Plex Sans", sans-serif;
   font-style: normal;
+
   font-weight: 800;
   color: #25333B;
   line-height: normal;
 }
+
 
 .container {
   width: 100%;

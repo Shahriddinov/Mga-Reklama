@@ -41,14 +41,7 @@ function HomeServices({servicesData, error, loading}) {
             </div>
 
             <div className="services_show">
-                {/*<div className="services_show_serTit">*/}
-                {/*    <div className="services_show_serTit_stavka">*/}
 
-                {/*    </div>*/}
-                {/*    <div className="services_show_serTit_patty">*/}
-
-                {/*        Ключевые слова наши услуги</div>*/}
-                {/*</div>*/}
             </div>
             <div className="services_bad">
 

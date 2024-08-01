@@ -45,118 +45,33 @@ function HomeServices({servicesData, error, loading}) {
             </div>
             <div className="services_bad">
 
-                <div className="row">
+                <div className="container">
                     <div className="services_bad_double">
-
+                        {servicesData.map((item, index) => (
                             <motion.a
                                 whileTap={{ scale: 0.8 }}
-                                href="/gallery" data-aos="fade-right"
-                                 data-aos-easing="ease-out-cubic"
-                                 data-aos-duration="1500" className="services_bad_double_serviceAbout">
+                                href="/gallery"
+                                data-aos="fade-right"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="1500"
+                                className="services_bad_double_serviceAbout"
+                                key={index}
+                                initial={{ opacity: 0, y: 50 }} // Initial state before scroll
+                                animate={{ opacity: 1, y: 0 }} // Final state after scroll
+                                transition={{ duration: 0.5, delay: index * 0.2 }} // Staggered animation
+                                viewport={{ once: true }} // Ensure animation occurs only once
+                                whileHover={{ scale: 1.05 }} // Scale effect on hover
+                                // whileTap={{ scale: 0.95 }} // Scale effect on tap
+                                >
                                 <div className="zoom"></div>
-
-                                <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${servicesData[0]?.image}`} alt=""/>
-                                <div className="services_bad_double_serviceAbout_laser"> {servicesData[0]?.title}</div>
-
-                                <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
+                                <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${item?.image}`} alt="" />
+                                <div className="services_bad_double_serviceAbout_laser">{item?.title}</div>
+                                <div>
+                                    <FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus} />
                                 </div>
                             </motion.a>
-
-
-                        <motion.a
-                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="fade-down"
-                             data-aos-easing="ease-out-cubic"
-                             data-aos-duration="1500" className="services_bad_double_serviceAbout">
-                            <div className="zoom"></div>
-                            <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${servicesData[1]?.image}`} alt=""/>
-                            <div className="services_bad_double_serviceAbout_laser"> {servicesData[1]?.title}</div>
-
-                            <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
-                            </div>
-                        </motion.a>
-                        <motion.a
-                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="fade-left"
-                             data-aos-easing="ease-out-cubic"
-                             data-aos-duration="1500" className="services_bad_double_serviceAbout">
-                            <div className="zoom"></div>
-                            <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${servicesData[2]?.image}`} alt=""/>
-                            <div className="services_bad_double_serviceAbout_laser"> {servicesData[2]?.title}</div>
-
-                            <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
-                            </div>
-                        </motion.a>
+                        ))}
                     </div>
-                    <div className="services_bad_double" style={{ marginTop:"40px"}}>
-                        <motion.a
-                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
-                             data-aos-easing="ease-out-cubic"
-                             data-aos-duration="2000" className="services_bad_double_serviceAbout">
-                            <div className="zoom"></div>
-                            <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${servicesData[3]?.image}`} alt=""/>
-                            <div className="services_bad_double_serviceAbout_laser"> {servicesData[3]?.title}</div>
-
-                            <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
-                            </div>
-                        </motion.a>
-                        <motion.a
-                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
-                             data-aos-easing="ease-out-cubic"
-                             data-aos-duration="2000" className="services_bad_double_serviceAbout">
-                            <div className="zoom"></div>
-                            <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${servicesData[4]?.image}`} alt=""/>
-                            <div className="services_bad_double_serviceAbout_laser"> {servicesData[4]?.title}</div>
-                            <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
-                            </div>
-                        </motion.a>
-                        <motion.a
-                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
-                             data-aos-easing="ease-out-cubic"
-                             data-aos-duration="2000" className="services_bad_double_serviceAbout">
-                            <div className="zoom"></div>
-                            <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${servicesData[5]?.image}`} alt=""/>
-                            <div className="services_bad_double_serviceAbout_laser"> {servicesData[5]?.title}</div>
-
-                            <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
-                            </div>
-                        </motion.a>
-                    </div>
-                    <div className="services_bad_double" style={{ marginTop:"40px"}}>
-                        <motion.a
-                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
-                             data-aos-easing="ease-out-cubic"
-                             data-aos-duration="2000" className="services_bad_double_serviceAbout">
-                            <div className="zodm"></div>
-                            <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${servicesData[6]?.image}`} alt=""/>
-                            <div className="services_bad_double_serviceAbout_laser"> {servicesData[6]?.title}</div>
-
-                            <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
-                            </div>
-                        </motion.a>
-                        <motion.a
-                            whileTap={{ scale: 0.8 }} href="/gallery" data-aos="zoom-in-down"
-                             data-aos-easing="ease-out-cubic"
-                             data-aos-duration="2000" className="services_bad_double_serviceAbout">
-                            <div className="zoom"></div>
-                            <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${servicesData[7]?.image}`} alt=""/>
-                            <div className="services_bad_double_serviceAbout_laser"> {servicesData[7]?.title}</div>
-
-                            <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
-                            </div>
-                        </motion.a>
-                        <motion.a
-                            whileTap={{ scale: 0.8 }} data-aos="zoom-in-down"
-                             data-aos-easing="ease-out-cubic"
-                             data-aos-duration="2000" className="services_bad_double_serviceAbout">
-                            <div className="zoom"></div>
-                            <img className="services_bad_double_serviceAbout_seven" src={`${baseUrlImg}/${servicesData[8]?.image}`} alt=""/>
-                            <div className="services_bad_double_serviceAbout_laser"> {servicesData[8]?.title}</div>
-
-                            <div><FontAwesomeIcon className="services_bad_double_serviceAbout_plus" icon={faPlus}/>
-                            </div>
-                        </motion.a>
-                    </div>
-
-
                 </div>
             </div>
 

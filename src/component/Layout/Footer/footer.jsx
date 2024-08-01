@@ -17,7 +17,7 @@ const Footer = () => {
     }, [dispatch,lan]);
     return (
         <div className="footer">
-            <div className="row">
+            <div className="container">
                 <div className="footer_df">
                     <div className="footer_df_cardFooter">
                         <a href="#">
@@ -46,8 +46,8 @@ const Footer = () => {
                     </div>
                     <div className="footer_df_cardFooter">
                         <div style={{marginBottom:"40px"}}>{t("services")}</div>
-                        {servicesData.map((item, id)=>(
-                            <ul className="footer_df_cardFooter_Fserver">
+                        {servicesData.map((item)=>(
+                            <ul key={item.id} className="footer_df_cardFooter_Fserver">
                                 <li>
                                     <a href="/gallery">{item.title}</a>
                                 </li>

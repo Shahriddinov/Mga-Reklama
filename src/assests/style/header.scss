@@ -15,7 +15,7 @@
   &_header {
     height: 93px;
     padding: 20px;
-    width: 100%;
+    // width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -58,12 +58,13 @@
           -ms-flex-pack: justify;
               justify-content: space-between;
       gap: 15px;
-      
+
 
 
       &_nav {
         cursor: pointer;
         padding: 10px;
+
         color: #25333B;
         font-size: 16px;
         font-style: normal;
@@ -71,21 +72,11 @@
         line-height: normal;
         text-transform: uppercase;
 
-        &::before {
-          background-color: red;
-          content: "";
-          width: 0;
-          height: 3px;
-          left: 0;
-          bottom: 0;
-          -webkit-transition: width 0.35s ease 0s;
-          -o-transition: width 0.35s ease 0s;
-          transition: width 0.35s ease 0s;
-          position: absolute;
-        }
 
-        &:hover::after {
-          width: 100%;
+        &:hover{
+          background: #3d5360;
+color: white;
+          //width: 910%;
         }
       }
 
@@ -126,7 +117,7 @@
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center;
-         
+
         }
 
         &-bar {

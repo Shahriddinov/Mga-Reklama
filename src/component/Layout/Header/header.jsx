@@ -1,12 +1,10 @@
 import React from "react";
 import {useEffect, useState} from "react"
 import {Link} from "react-router-dom";
-import {Trans} from "react-i18next";
-import burger from "../../../assests/images/burger.svg";
 import {useDispatch, useSelector} from "react-redux";
 import i18next from "i18next";
 import Logo from "../../../assests/images/Log.png"
-import {CgClose} from "react-icons/cg";
+
 import {CiGlobe} from "react-icons/ci";
 import {IoMdArrowDropdown} from "react-icons/io";
 import {languageChange} from "../../../reduxToolkit/languageSlice";
@@ -18,14 +16,11 @@ import Spinner from "../../Spinner";
 import { useMediaQuery } from "react-responsive";
 import { IoClose, IoMenu } from "react-icons/io5";
 const Header = () => {
-    // const { t } = useTranslation();
-
     const dispatch = useDispatch();
     const loading = useSelector((state) => state.socialSlice.loading);
     const isMobile = useMediaQuery({ maxWidth: "1150px" });
     const language = useSelector((state) => state.language.language);
     const [activeLang, setactiveLang] = useState(false);
-    const [activeSidebar, setactiveSidebar] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
     const socialData = useSelector((state) => state.socialSlice.socialData);
     const toggleChecked = () => {
@@ -68,9 +63,7 @@ const Header = () => {
                         <li
                             className="h_header_navbar_nav">{t("gallery")}</li>
                     </Link>
-                    <Link to="/board" onClick={closeMobileMenu}>
-                        <li className="h_header_navbar_nav">{t("art")}</li>
-                    </Link>
+                   
                     <Link to="/contact" onClick={closeMobileMenu}>
                         <li className="h_header_navbar_nav">{t("contact")}</li>
                     </Link>

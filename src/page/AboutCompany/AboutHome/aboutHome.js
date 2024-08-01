@@ -23,14 +23,26 @@ export default function AboutHome() {
         dispatch(getAbout());
     }, [dispatch, lan]);
 
+    const renderStyledTitle = (title) => {
+        // Split the title into parts; here assuming 3 parts for simplicity
+        const parts = title.split(' '); // Adjust this logic as needed
 
+        // Return JSX with styled spans
+        return (
+            <div style={{display:"flex", gap:"10px", }}>
+                <span className="title-part1">{parts[0]}</span>
+                <span className="title-part2">{parts[1]}</span>
+                <span style={{color:"#abd046"}}>{parts[2]}</span>
+            </div>
+        );
+    };
 
     return (
         <div className="aboutCompany">
             {aboutData?.map((item, index) => (
                 <>
                     <div key={index} className="aboutCompany_fl">
-                        <div className="row">
+                        <div className="container">
                             <div className="aboutCompany_fl_comp">
                                 <div className="aboutCompany_fl_comp_ImgT">
                                     <div data-aos="fade-up"
@@ -54,7 +66,8 @@ export default function AboutHome() {
                                         <div data-aos="fade-down"
                                              data-aos-easing="ease-out-cubic"
                                              data-aos-duration="1500" className="aboutCompany_fl_comp_ImgT_full_com">
-                                            {item.title}
+                                            {renderStyledTitle(item.title)} {/* Render styled title */}
+
 
                                         </div>
                                         <div data-aos="fade-up"

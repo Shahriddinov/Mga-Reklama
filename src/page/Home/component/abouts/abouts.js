@@ -17,7 +17,7 @@ function Abouts(props) {
 
     return (
         <div className="abouts">
-            <div className="row">
+            <div className="container">
 
 
                 <iframe

@@ -62,15 +62,19 @@
     padding: 60px 0;
 
     &_double {
+      width: 100%;
+      height: auto;
       display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
       justify-content: space-between;
       position: relative;
-      background-image: url("../../../assests/images/dotted-pattern.png");
 
       &_serviceAbout {
         width: 28%;
-        background-image: linear-gradient(30deg, #25333b, #e8ebec);
-        color: white;
+        height: 300px;
+        background: white;
+        color: #25333B;
         display: flex;
         padding: 30px 45px;
         flex-direction: column;
@@ -79,40 +83,50 @@
         gap: 30px;
         position: relative;
         border-radius: 24px;
-        transform: scale(1); /* Adjust the scale factor for zoom effect */
+        transition: background 0.3s, color 0.3s;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        transform: scale(1); /* Adjust the scale factor for zoom effect */
+        //box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #3d5360; /* You can adjust the color */
+          transition: transform 0.5s, opacity 0.5s;
+          transform: scale(0); /* Start from scale 0 */
+          z-index: 0;
+          color: white;
+          border-radius: inherit;
+        }
 
         &:hover {
-          color: #25333B;
+          //background: #25333B;
+          color: white;
           cursor: pointer;
+          transform: scale(1.05);
 
-          &_seven:hover {
-            transform: scale(1.1);
-          }
-
-        }
-
-        @keyframes pulse512 {
-          0% {
-            box-shadow: 0 0 0 0 #05bada66;
-          }
-
-          70% {
-            box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
-          }
-
-          100% {
-            box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+          &::before {
+            transform: scale(1);
+            opacity: 1;
           }
         }
+
+
+
 
         &_seven {
           width: 72px;
           height: 73px;
+          color: white;
           background-repeat: no-repeat;
           background-size: cover;
           object-fit: cover;
           transition: transform 0.3s ease;
+          z-index: 2;
         }
 
         &_laser {
@@ -122,7 +136,7 @@
           color: inherit;
           font-weight: 900;
           font-style: normal;
-
+          z-index: 2;
         }
 
         &_plus {
@@ -130,10 +144,12 @@
           justify-content: right;
           text-align: right;
           float: right;
-          transition: transform 0.5s;
+          transition: transform 0.5s, color 0.5s;
+          z-index: 2;
 
           &:hover {
             transform: rotate(360deg);
+            color: white;
 
           }
 
@@ -143,49 +159,7 @@
       }
     }
 
-    &_double1 {
-      display: flex;
-      justify-content: space-between;
 
-      &_serviceAbout {
-        width: 50%;
-        border: 1px solid red;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: white !important;
-        transition: transform 0.2s; /* Animation */
-        gap: 40px;
-
-        &_seven {
-          width: 100%;
-          height: 300px;
-          background-repeat: no-repeat;
-          background-size: cover;
-          object-fit: cover;
-        }
-
-        &_laser {
-          font-size: 28px;
-          font-style: normal;
-          font-weight: 900;
-          line-height: normal;
-
-        }
-
-        &_lorem {
-          padding: 0 40px;
-          color: #000;
-          text-align: center;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 22px;
-          text-align: justify;
-        }
-      }
-    }
   }
 }
 

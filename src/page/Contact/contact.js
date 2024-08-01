@@ -79,7 +79,7 @@ function Contact(props) {
             </div>
             <div className="contact_headersText">{t("help")}</div>
             <div className="contact_contactRow">
-                <div className="row">
+                <div className="container">
                     {/*<a href={`tel:${contactData.phone}`}>{contactData.phone}</a>*/}
                     {/*<a href={`mailto:${contactData.email}`}>*/}
                     {/*    {contactData.email}*/}

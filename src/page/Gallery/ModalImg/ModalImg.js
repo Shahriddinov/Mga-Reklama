@@ -1,3 +1,5 @@
+// Modal.jsx
+
 import React from "react";
 
 const modal = {
@@ -13,7 +15,7 @@ const modal = {
 
 const close = {
     position: "absolute",
-    top: 15,
+    top: 30,
     right: 35,
     color: "#f1f1f1",
     fontSize: 40,
@@ -24,22 +26,36 @@ const close = {
 const modalContent = {
     display: "flex",
     alignItems: "center",
+    justifyContent: "space-between",
     width: "85%",
-    height: "100%",
-    margin: "auto"
+    height: "92vh",
+    margin: "0 auto",
+    marginTop:"80px",
+    position: "relative"
+};
+
+const button = {
+    fontSize: 40,
+    color: "#f1f1f1",
+    cursor: "pointer",
+    userSelect: "none"
 };
 
 export const Modal = ({ onOpen, children }) => {
-    return <div onClick={onOpen}> {children}</div>;
+    const handleClick = (e) => {
+        if (e.target === e.currentTarget) {
+            onOpen();
+        }
+    };
+
+    return <div style={modal} onClick={handleClick}>{children}</div>;
 };
 
 export const ModalContent = ({ onClose, children }) => {
     return (
-        <div style={modal}>
-      <span style={close} onClick={onClose}>
-        &times;
-      </span>
-            <div style={modalContent}>{children}</div>
+        <div style={modalContent}>
+            <span style={close} onClick={onClose}>&times;</span>
+            {children}
         </div>
     );
 };

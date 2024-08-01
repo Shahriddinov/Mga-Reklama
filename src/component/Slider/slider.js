@@ -30,7 +30,7 @@ function Slider(props) {
         <>
             <div className="slider">
 
-                <div className="row" style={{ display: "flex", flexWrap:"wrap", justifyContent:"center", margin:"0 auto"}}>
+                <div className="container" style={{ display: "flex", flexWrap:"wrap", justifyContent:"center", margin:"0 auto"}}>
                     <h1 style={{marginBottom:"5%"}}>{t("partner")}</h1>
                     <Swiper
                         slidesPerView={7}
